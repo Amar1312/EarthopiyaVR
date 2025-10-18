@@ -26,6 +26,10 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        Application.targetFrameRate = 30;
+    }
 
     // Switch to a specific screen by index
     public void SwitchScreen(int screen)
