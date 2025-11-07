@@ -6,6 +6,7 @@ public class ChooseSeatPanel : MonoBehaviour
     public Toggle _seatTog;
     public Image _seatPlaneImage;
     public Sprite _selectSeat, _unSelectSeat;
+    public FlightData _flightData;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

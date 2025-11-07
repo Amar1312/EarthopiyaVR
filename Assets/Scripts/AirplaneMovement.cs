@@ -20,10 +20,10 @@ public class AirplaneMovement : MonoBehaviour
     public float rotateDuration = 0.3f;  // Rotation speed
 
     [Header("Screen Padding")]
-    public float paddingTop = 50f;
-    public float paddingBottom = 100f;
-    public float paddingLeft = 50f;
-    public float paddingRight = 50f;
+    private float paddingTop;
+    private float paddingBottom;
+    private float paddingLeft;
+    private float paddingRight;
 
     [Header("Floating Animation")]
     public float floatDistance = 30f;     // How far past PointB the airplane floats
@@ -38,17 +38,55 @@ public class AirplaneMovement : MonoBehaviour
     private RectTransform canvasRect;
     private Coroutine planeOff;
 
+    [Header("Screen Padding (Percentage of Screen)")]
+    [Range(0f, 0.5f)]
+    public float paddingTopPercent = 0.05f;
+    [Range(0f, 0.5f)]
+    public float paddingBottomPercent = 0.1f;
+    [Range(0f, 0.5f)]
+    public float paddingLeftPercent = 0.05f;
+    [Range(0f, 0.5f)]
+    public float paddingRightPercent = 0.05f;
+
     void Start()
     {
         canvasRect = mainImage.GetComponentInParent<Canvas>().GetComponent<RectTransform>();
-
+        CalculatePadding();
         //MoveAirplane();
+    }
+
+    void CalculatePadding()
+    {
+        paddingTop = Screen.height * paddingTopPercent;
+        paddingBottom = Screen.height * paddingBottomPercent;
+        paddingLeft = Screen.width * paddingLeftPercent;
+        paddingRight = Screen.width * paddingRightPercent;
     }
 
     public void SetDestinetion(RectTransform transform)
     {
+        StopAllAnimations();
         pointB = transform;
         StartAnimation();
+    }
+
+    void StopAllAnimations()
+    {
+        airplane.DOKill();
+        jeep.DOKill();
+        mainImage.DOKill();
+
+        CancelInvoke(nameof(OffPlane));
+        CancelInvoke(nameof(offJeep));
+
+        if (planeOff != null)
+        {
+            StopCoroutine(planeOff);
+            planeOff = null;
+        }
+
+        airplane.gameObject.SetActive(false);
+        jeep.gameObject.SetActive(false);
     }
 
     public void StartAnimation()
@@ -95,13 +133,13 @@ public class AirplaneMovement : MonoBehaviour
         //    StopCoroutine(planeOff);
         //    planeOff = null;
         //}
-
+        CalculatePadding();
         float distance = Vector2.Distance(airplane.anchoredPosition, targetPos);
         float moveDuration = distance / speed;
 
         airplane.DOAnchorPos(targetPos, moveDuration)
             .SetEase(Ease.Linear)
-            .OnUpdate(CheckVisibility)
+            .OnUpdate(CheckVisibility2)
             .OnComplete(() =>
             {
                 //airplane.gameObject.SetActive(true);
@@ -166,6 +204,87 @@ public class AirplaneMovement : MonoBehaviour
         {
             KeepPlaneOnScreen();
         }
+    }
+
+    void CheckVisibility2()
+    {
+        // Get screen position of the airplane (in pixels)
+        Canvas canvas = canvasRect.GetComponent<Canvas>();
+        Camera cam = canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera;
+        Vector2 screenPos = RectTransformUtility.WorldToScreenPoint(cam, airplane.position);
+
+        // Define padded screen rect in screen-space pixels
+        float minX = paddingLeft;
+        float maxX = Screen.width - paddingRight;
+        float minY = paddingBottom;
+        float maxY = Screen.height - paddingTop;
+
+
+        bool outsideX = screenPos.x < minX || screenPos.x > maxX;
+        bool outsideY = screenPos.y < minY || screenPos.y > maxY;
+
+        if (outsideX || outsideY)
+        {
+            KeepPlaneOnScreen(screenPos, cam, minX, maxX, minY, maxY);
+        }
+    }
+
+    void KeepPlaneOnScreen(Vector2 airplaneScreenPos, Camera cam, float minX, float maxX, float minY, float maxY)
+    {
+        Vector2 airplaneLocal;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, airplaneScreenPos, cam, out airplaneLocal);
+
+        float targetScreenX = Mathf.Clamp(airplaneScreenPos.x, minX, maxX);
+        float targetScreenY = Mathf.Clamp(airplaneScreenPos.y, minY, maxY);
+        Vector2 targetScreenPos = new Vector2(targetScreenX, targetScreenY);
+
+        Vector2 targetLocal;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, targetScreenPos, cam, out targetLocal);
+
+        Vector2 deltaLocal = targetLocal - airplaneLocal;
+
+        Vector3 worldDelta = canvasRect.TransformVector(deltaLocal);
+
+        Vector3 parentLocalDelta = mainImage.parent.InverseTransformVector(worldDelta);
+
+        Vector2 newAnchored = mainImage.anchoredPosition + (Vector2)parentLocalDelta;
+
+        newAnchored = ClampMainImageAnchoredToBounds(newAnchored);
+
+        // Smoothly move the map
+        mainImage.DOAnchorPos(newAnchored, 0.18f).SetEase(Ease.OutQuad);
+    }
+
+    Vector2 ClampMainImageAnchoredToBounds(Vector2 desiredAnchored)
+    {
+        RectTransform parentRect = mainImage.parent as RectTransform;
+        Vector2 result = desiredAnchored;
+
+        float canvasWidth = canvasRect.rect.width;
+        float mapWidth = mainImage.rect.width;
+        if (mapWidth <= canvasWidth)
+        {
+            result.x = 0;
+        }
+        else
+        {
+            float halfDiffX = (mapWidth - canvasWidth) * 0.5f;
+            result.x = Mathf.Clamp(result.x, -halfDiffX, halfDiffX);
+        }
+
+        float canvasHeight = canvasRect.rect.height;
+        float mapHeight = mainImage.rect.height;
+        if (mapHeight <= canvasHeight)
+        {
+            result.y = 0;
+        }
+        else
+        {
+            float halfDiffY = (mapHeight - canvasHeight) * 0.5f;
+            result.y = Mathf.Clamp(result.y, -halfDiffY, halfDiffY);
+        }
+
+        return result;
     }
 
     void KeepPlaneOnScreen()
