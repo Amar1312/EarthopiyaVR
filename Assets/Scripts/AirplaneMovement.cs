@@ -39,13 +39,13 @@ public class AirplaneMovement : MonoBehaviour
     private Coroutine planeOff;
 
     [Header("Screen Padding (Percentage of Screen)")]
-    [Range(0f, 0.5f)]
+    [Range(0f, 1f)]
     public float paddingTopPercent = 0.05f;
-    [Range(0f, 0.5f)]
+    [Range(0f, 1f)]
     public float paddingBottomPercent = 0.1f;
-    [Range(0f, 0.5f)]
+    [Range(0f, 1f)]
     public float paddingLeftPercent = 0.05f;
-    [Range(0f, 0.5f)]
+    [Range(0f, 1f)]
     public float paddingRightPercent = 0.05f;
 
     void Start()

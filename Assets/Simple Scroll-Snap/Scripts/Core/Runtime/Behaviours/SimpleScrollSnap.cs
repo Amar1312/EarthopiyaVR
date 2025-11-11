@@ -14,6 +14,11 @@ namespace DanielLochner.Assets.SimpleScrollSnap
     public class SimpleScrollSnap : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler, IPointerDownHandler, IPointerUpHandler
     {
         #region Fields
+
+        [Space]
+        [Header("Select Index")]
+        public int _selectItem;
+
         // Movement and Layout Settings
         [SerializeField] private MovementType movementType = MovementType.Fixed;
         [SerializeField] private MovementAxis movementAxis = MovementAxis.Horizontal;
@@ -48,8 +53,7 @@ namespace DanielLochner.Assets.SimpleScrollSnap
         [SerializeField] private UnityEvent<int> onPanelSelected = new UnityEvent<int>();
         [SerializeField] private UnityEvent<int, int> onPanelCentering = new UnityEvent<int, int>();
         [SerializeField] private UnityEvent<int, int> onPanelCentered = new UnityEvent<int, int>();
-
-        public int _selectItem;
+        
 
         private ScrollRect scrollRect;
         private Vector2 contentSize, prevAnchoredPosition, velocity;

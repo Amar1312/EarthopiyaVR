@@ -7,6 +7,7 @@ public class SelectAnimalScroll : MonoBehaviour
 {
     public SimpleScrollSnap _scroll;
     public SimpleScrollSnap _mainScroll;
+    public SimpleScrollSnap _dummyScroll;
     public RectTransform _contant;
     public RectTransform _imageContant;
 
@@ -34,6 +35,20 @@ public class SelectAnimalScroll : MonoBehaviour
     }
     public void SelectImageItem()
     {
+        if (_scroll.gameObject.activeInHierarchy)
+        {
+            SetData();
+        }
+        else
+        {
+            _dummyScroll.gameObject.SetActive(false);
+            _scroll.gameObject.SetActive(true);
+            Invoke(nameof(SetData), 0.05f);
+        }
+    }
+
+    void SetData()
+    {
         int Index = _mainScroll._selectItem;
         _scroll.GoToPanel(Index);
     }
@@ -42,21 +57,26 @@ public class SelectAnimalScroll : MonoBehaviour
     {
         int Index = _scroll._selectItem;
         _pointIndex = Index;
+
+        ScrollSelectBtn(Index);
+
+    }
+
+    public void ScrollSelectBtn(int Index)
+    {
         for (int i = 0; i < _destinetionPoint.Count; i++)
         {
-            //if (i == 0) { continue; }
             _destinetionPoint[i].gameObject.SetActive(false);
         }
-        _selectTitle.SetActive(false);
-        //if(Index == 0)
-        //{
+        _destinetionPoint[Index].gameObject.SetActive(true);
+        _airplane.SetDestinetion(_destinetionPoint[Index]);
 
-        //}
-        //else
-        //{
-            _destinetionPoint[Index].gameObject.SetActive(true);
-            _airplane.SetDestinetion(_destinetionPoint[Index]);
-        //}
+        for (int i = 0; i < _titleName.Count; i++)
+        {
+            _titleName[i].gameObject.SetActive(false);
+        }
+        _titleName[Index].gameObject.SetActive(true);
+        _selectTitle.SetActive(false);
 
         for (int i = 0; i < _scrollBtn.Count; i++)
         {
@@ -70,25 +90,12 @@ public class SelectAnimalScroll : MonoBehaviour
         }
         _mainScroll.GoToPanel(Index);
 
-        for (int i = 0; i < _titleName.Count; i++)
-        {
-            _titleName[i].gameObject.SetActive(false);
-        }
-        _titleName[Index].gameObject.SetActive(true);
-
         Debug.Log(Index);
-        
     }
+
 
     public void OnDestination()
     {
-        //if(_pointIndex == 0)
-        //{
-
-        //}
-        //else
-        //{
-        //}
 
         for (int i = 0; i < _destinetionPoint.Count; i++)
         {

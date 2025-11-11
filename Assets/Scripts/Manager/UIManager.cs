@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Video;
 
 public class UIManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class UIManager : MonoBehaviour
     #region Variables
     public static UIManager instance;
     public List<GameObject> screens;
+    public VideoPlayer _splaceScreenVideo;
     #endregion
 
 
