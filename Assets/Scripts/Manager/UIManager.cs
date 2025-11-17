@@ -10,6 +10,12 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
     public List<GameObject> screens;
     public VideoPlayer _splaceScreenVideo;
+
+    public BookFlightScreen _bookFlightScript;
+    public SearchDetailPanel _searchDetailScript;
+    public FlightDetailPanel _flightDetailScript;
+    public ChooseSeatPanel _chooseSeatScript;
+    public BoardingPassPanel _boardingPassScript;
     #endregion
 
 

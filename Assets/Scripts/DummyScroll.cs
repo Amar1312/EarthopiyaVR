@@ -22,17 +22,20 @@ public class DummyScroll : MonoBehaviour
 
     public void SelctOneItem()
     {
-        _mainScrollObject.SetActive(true);
-        Invoke(nameof(SetData), 0.05f);
-        _dummyScrollObject.SetActive(false);
+        if (_dummyScroll._selectItem != 0)
+        {
+            _mainScrollObject.SetActive(true);
+            Invoke(nameof(SetData), 0.05f);
+            _dummyScrollObject.SetActive(false);
+        }
     }
 
     public void SetData()
     {
         int Index = _dummyScroll._selectItem - 1;
-        Debug.Log(Index + " index ");
         _selectAnimal.GoToPanel(Index);
 
         _selectScroll.ScrollSelectBtn(Index);
+
     }
 }

@@ -21,6 +21,6 @@ public class FlightDetailButton : MonoBehaviour
     {
         _desinationField.text = _destinationName;
         _nextSafariScroll.SetActive(false);
-
+        UIManager.instance._bookFlightScript._flightData = _flightData;
     }
 }
