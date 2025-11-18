@@ -9,6 +9,9 @@ public class UIManager : MonoBehaviour
     #region Variables
     public static UIManager instance;
     public List<GameObject> screens;
+    public List<GameObject> loginScreens;
+    public SignupBirthday _signupBirthScript;
+    public GameObject _loadingPnel;
     public VideoPlayer _splaceScreenVideo;
 
     public BookFlightScreen _bookFlightScript;
@@ -53,6 +56,26 @@ public class UIManager : MonoBehaviour
                 screens[i].SetActive(false);
             }
         }
+    }
+
+    public void SwitchLoginScreen(int screen)
+    {
+        for (int i = 0; i < loginScreens.Count; i++)
+        {
+            if (i == screen)
+            {
+                loginScreens[i].SetActive(true);
+            }
+            else
+            {
+                loginScreens[i].SetActive(false);
+            }
+        }
+    }
+
+    public void ToggleLoadingPanel(bool status)
+    {
+        _loadingPnel.SetActive(status);
     }
 
     public void ButtonClick()

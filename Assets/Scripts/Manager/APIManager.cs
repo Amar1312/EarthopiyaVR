@@ -33,6 +33,15 @@ public class APIManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void Start()
+    {
+        if (PlayerPrefs.HasKey("ApiToken"))
+        {
+            ApiToken = PlayerPrefs.GetString("ApiToken");
+        }
+    }
+
     #region Check_InternetConnection 
 
     private void CheckInternet(Action<bool> action)
@@ -63,7 +72,7 @@ public class APIManager : MonoBehaviour
 
     private IEnumerator LoginInIEnum(string email, string password, Action<LoginResponce> response)
     {
-        //UiPanelManager.Instance.ToggleLoadingPanel(true);
+        UIManager.instance.ToggleLoadingPanel(true);
 
         LoginClass _rawdata = new LoginClass(email, password);
         string rawstring = JsonUtility.ToJson(_rawdata);
@@ -105,7 +114,7 @@ public class APIManager : MonoBehaviour
             Debug.Log("Login Error: " + request.downloadHandler.text);
         }
 
-        //UiPanelManager.Instance.ToggleLoadingPanel(false);
+        UIManager.instance.ToggleLoadingPanel(false);
 
         response.Invoke(callback);
 
@@ -129,7 +138,7 @@ public class APIManager : MonoBehaviour
 
     private IEnumerator SignUpIEnum(string email, string firstName, string lastName, string Dob, string password, string password_con, Action<LoginResponce> response)
     {
-        //UiPanelManager.Instance.ToggleLoadingPanel(true);
+        UIManager.instance.ToggleLoadingPanel(true);
 
         SignUpClass _rawdata = new SignUpClass(email, firstName, lastName, Dob, password, password_con);
         string rawstring = JsonUtility.ToJson(_rawdata);
@@ -172,7 +181,7 @@ public class APIManager : MonoBehaviour
             Debug.Log("Sign UP Error: " + request.downloadHandler.text);
         }
 
-        //UiPanelManager.Instance.ToggleLoadingPanel(false);
+        UIManager.instance.ToggleLoadingPanel(false);
 
         response.Invoke(callback);
 
@@ -198,7 +207,7 @@ public class APIManager : MonoBehaviour
 
     private IEnumerator SocialLoginInIEnum(string provider, string provider_id, string email, string firstname, string lastname, Action<LoginResponce> response)
     {
-        //UiPanelManager.Instance.ToggleLoadingPanel(true);
+        UIManager.instance.ToggleLoadingPanel(true);
 
         SocialLoginClass _rawdata = new SocialLoginClass(provider, provider_id, email, firstname, lastname);
         string rawstring = JsonUtility.ToJson(_rawdata);
@@ -244,7 +253,7 @@ public class APIManager : MonoBehaviour
 
         }
 
-        //UiPanelManager.Instance.ToggleLoadingPanel(false);
+        UIManager.instance.ToggleLoadingPanel(false);
 
         response.Invoke(callback);
 
@@ -267,7 +276,7 @@ public class APIManager : MonoBehaviour
 
     private IEnumerator GetProfileIEnum(Action<ProfileResponce> response)
     {
-        //UiPanelManager.Instance.ToggleLoadingPanel(true);
+        UIManager.instance.ToggleLoadingPanel(true);
 
         GetProfileClass _rawdata = new GetProfileClass();
         string rawstring = JsonUtility.ToJson(_rawdata);
@@ -309,7 +318,7 @@ public class APIManager : MonoBehaviour
             Debug.Log("Get Profile Error: " + request.downloadHandler.text);
         }
 
-        //UiPanelManager.Instance.ToggleLoadingPanel(false);
+        UIManager.instance.ToggleLoadingPanel(false);
 
         response.Invoke(callback);
 
@@ -332,7 +341,7 @@ public class APIManager : MonoBehaviour
 
     private IEnumerator UpdateProfileIEnum(string firstName, string lastName, string Dob, string phone_no, string profile_image, Action<UpdateProfileResponce> response)
     {
-        //UiPanelManager.Instance.ToggleLoadingPanel(true);
+        UIManager.instance.ToggleLoadingPanel(true);
 
         UpdateProfileClass _rawdata = new UpdateProfileClass(firstName, lastName, Dob, phone_no, profile_image);
         string rawstring = JsonUtility.ToJson(_rawdata);
@@ -374,7 +383,7 @@ public class APIManager : MonoBehaviour
             Debug.Log("Update Profile Error: " + request.downloadHandler.text);
         }
 
-        //UiPanelManager.Instance.ToggleLoadingPanel(false);
+        UIManager.instance.ToggleLoadingPanel(false);
 
         response.Invoke(callback);
 
@@ -398,7 +407,7 @@ public class APIManager : MonoBehaviour
 
     private IEnumerator UpdatePassportIEnum(List<string> passport_ids, Action<UpdatePassportResponce> response)
     {
-        //UiPanelManager.Instance.ToggleLoadingPanel(true);
+        UIManager.instance.ToggleLoadingPanel(true);
 
         UpdatePassportClass _rawdata = new UpdatePassportClass(passport_ids);
         string rawstring = JsonUtility.ToJson(_rawdata);
@@ -441,7 +450,7 @@ public class APIManager : MonoBehaviour
             Debug.Log("Update Passport Error: " + request.downloadHandler.text);
         }
 
-        //UiPanelManager.Instance.ToggleLoadingPanel(false);
+        UIManager.instance.ToggleLoadingPanel(false);
 
         response.Invoke(callback);
 
@@ -464,7 +473,7 @@ public class APIManager : MonoBehaviour
 
     private IEnumerator DeleteAccountIEnum(string email, string password, Action<DeleteAccountResponce> response)
     {
-        //UiPanelManager.Instance.ToggleLoadingPanel(true);
+        UIManager.instance.ToggleLoadingPanel(true);
 
         DeleteAccountClass _rawdata = new DeleteAccountClass(email, password);
         string rawstring = JsonUtility.ToJson(_rawdata);
@@ -505,7 +514,7 @@ public class APIManager : MonoBehaviour
             Debug.Log("Delete Account Error: " + request.downloadHandler.text);
         }
 
-        //UiPanelManager.Instance.ToggleLoadingPanel(false);
+        UIManager.instance.ToggleLoadingPanel(false);
 
         response.Invoke(callback);
 
@@ -528,7 +537,7 @@ public class APIManager : MonoBehaviour
 
     private IEnumerator DeleteSocialAccountIEnum(string provider, string provider_id, Action<DeleteAccountResponce> response)
     {
-        //UiPanelManager.Instance.ToggleLoadingPanel(true);
+        UIManager.instance.ToggleLoadingPanel(true);
 
         DeleteSocialAccountClass _rawdata = new DeleteSocialAccountClass(provider, provider_id);
         string rawstring = JsonUtility.ToJson(_rawdata);
@@ -570,7 +579,7 @@ public class APIManager : MonoBehaviour
             Debug.Log("Delete Social Account Error: " + request.downloadHandler.text);
         }
 
-        //UiPanelManager.Instance.ToggleLoadingPanel(false);
+        UIManager.instance.ToggleLoadingPanel(false);
 
         response.Invoke(callback);
 
@@ -593,7 +602,7 @@ public class APIManager : MonoBehaviour
 
     private IEnumerator LogOutIEnum(Action<LogOutResponce> response)
     {
-        //UiPanelManager.Instance.ToggleLoadingPanel(true);
+        UIManager.instance.ToggleLoadingPanel(true);
 
         LogOutClass _rawdata = new LogOutClass();
         string rawstring = JsonUtility.ToJson(_rawdata);
@@ -634,7 +643,7 @@ public class APIManager : MonoBehaviour
             Debug.Log("LogOut Error: " + request.downloadHandler.text);
         }
 
-        //UiPanelManager.Instance.ToggleLoadingPanel(false);
+        UIManager.instance.ToggleLoadingPanel(false);
 
         response.Invoke(callback);
 

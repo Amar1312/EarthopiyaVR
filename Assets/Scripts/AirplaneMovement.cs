@@ -139,13 +139,12 @@ public class AirplaneMovement : MonoBehaviour
         {
             _airplaneImage.DOFade(1f, 0.4f).From(0f).SetEase(Ease.Linear);
         }
-        //CalculatePadding();
+
         float distance = Vector2.Distance(airplane.anchoredPosition, targetPos);
         float moveDuration = distance / speed;
         MoveMapToCenter();
         airplane.DOAnchorPos(targetPos, 0.5f)
             .SetEase(Ease.Linear)
-            //.OnUpdate(CheckVisibility2)
             .OnComplete(() =>
             {
                 //airplane.gameObject.SetActive(true);
