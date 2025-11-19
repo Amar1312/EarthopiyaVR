@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "648933519836",
+    "project_id": "earthopiyavr",
+    "storage_bucket": "earthopiyavr.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648933519836:android:19e71c130d64c390ed9f19",
+        "android_client_info": {
+          "package_name": "com.Techavtra.EarthopiyaVR"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648933519836-cja44133s2vitaf2qflflmulbc2m0dei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.Techavtra.EarthopiyaVR",
+            "certificate_hash": "06cdc07e29ff387db1a8bc6812b800a206fc6137"
+          }
+        },
+        {
+          "client_id": "648933519836-s6cnnrdeeciiv7773a0olg8dmrivb1cp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8hnmKWyi9qme6fBY8k8XYwaFBKfcb9uk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648933519836-s6cnnrdeeciiv7773a0olg8dmrivb1cp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
