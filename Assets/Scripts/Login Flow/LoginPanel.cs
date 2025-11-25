@@ -27,7 +27,7 @@ public class LoginPanel : MonoBehaviour
         {
             Debug.Log("Login API call");
 
-            //APIManager.Instance.LoginIn(email, password, LoginInResponse);
+            APIManager.Instance.LoginIn(email, password, LoginInResponse);
         }
         else
         {
@@ -56,7 +56,13 @@ public class LoginPanel : MonoBehaviour
     {
         if (responces.status)
         {
+            _uiManager.SwitchScreen(2);
             DataManager.Instance._userData = responces;
+            _uiManager._splaceScreenVideo.SetDirectAudioMute(0, true);
+        }
+        else
+        {
+            _uiManager.SwitchLoginScreen(1);
         }
     }
 }

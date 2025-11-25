@@ -31,6 +31,7 @@ namespace SignInSample
         public string email = "";
         public string _firstName = "";
         public string _lastName = "";
+        public string _profileImage = "";
 
         public string webClientId = "<your client id here>";
 
@@ -62,6 +63,7 @@ namespace SignInSample
         public void OnSignOut()
         {
             AddStatusText("Calling SignOut");
+            Debug.Log("Google Sign Out");
             GoogleSignIn.DefaultInstance.SignOut();
         }
 
@@ -105,16 +107,29 @@ namespace SignInSample
                 email = task.Result.Email;
                 _firstName = task.Result.DisplayName;
                 _lastName = task.Result.GivenName;
-                OnLogin();
+                _profileImage = task.Result.ImageUrl.ToString();
+
                 Debug.Log("Welcome: " + task.Result.DisplayName + "!");
                 Debug.Log("Welcome 1: " + task.Result.GivenName + "!");
+                Debug.Log("Image URL " + _profileImage);
+                OnLogin();
             }
         }
 
         void OnLogin()
         {
             Debug.Log("SocialLogin API Call ");
-            //APIManager.Instance.SocialLogin(email, "", googleID, "IOS", "device_token", SocialLoginResponse);
+            APIManager.Instance.SocialLogin("google", googleID, email, _firstName, _lastName, SocialLogInResponse);
+        }
+
+        void SocialLogInResponse(LoginResponce responces)
+        {
+            if (responces.status)
+            {
+                UIManager.instance.SwitchScreen(2);
+                UIManager.instance._splaceScreenVideo.SetDirectAudioMute(0, true);
+                DataManager.Instance._userData = responces;
+            }
         }
 
         public void OnSignInSilently()

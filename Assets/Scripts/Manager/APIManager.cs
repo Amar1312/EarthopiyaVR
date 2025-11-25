@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using UnityEngine.Networking;
 using System.Text;
@@ -8,7 +9,7 @@ using System.Text;
 public class APIManager : MonoBehaviour
 {
     public static APIManager Instance;
-    private const string APIBASEURL = "";
+    private const string APIBASEURL = "http://ec2-34-232-219-196.compute-1.amazonaws.com/api";
     private const string LOGIN = APIBASEURL + "/signin";
     private const string SIGNUP = APIBASEURL + "/signup";
     private const string SOCIALLOGIN = APIBASEURL + "/social-login";
@@ -98,6 +99,7 @@ public class APIManager : MonoBehaviour
             callback.status = true;
             ApiToken = callback.data.token;
             PlayerPrefs.SetString("ApiToken", ApiToken);
+            PlayerPrefs.SetInt("Login", 1);
         }
         else if (request.responseCode == 401)
         {
@@ -165,6 +167,7 @@ public class APIManager : MonoBehaviour
             callback.status = true;
             ApiToken = callback.data.token;
             PlayerPrefs.SetString("ApiToken", ApiToken);
+            PlayerPrefs.SetInt("Login", 1);
         }
         else if (request.responseCode == 401)
         {
@@ -235,6 +238,7 @@ public class APIManager : MonoBehaviour
             Debug.Log("Social Login Response: " + request.downloadHandler.text);
             ApiToken = callback.data.token;
             PlayerPrefs.SetString("ApiToken", ApiToken);
+            PlayerPrefs.SetInt("Login", 1);
         }
         else if (request.responseCode == 401)
         {
@@ -328,7 +332,7 @@ public class APIManager : MonoBehaviour
 
     #region Update Profile
 
-    public void UpdateProfile(string _firstName, string _lastName, string _DateOFBirth, string _phone_no, string _profile_image, Action<UpdateProfileResponce> response)
+    public void UpdateProfile(string _firstName, string _lastName, string _DateOFBirth, string _phone_no, Image _profile_image, Action<UpdateProfileResponce> response)
     {
         CheckInternet(status =>
         {
@@ -339,22 +343,38 @@ public class APIManager : MonoBehaviour
         });
     }
 
-    private IEnumerator UpdateProfileIEnum(string firstName, string lastName, string Dob, string phone_no, string profile_image, Action<UpdateProfileResponce> response)
+    private IEnumerator UpdateProfileIEnum(string firstName, string lastName, string Dob, string phone_no, Image profile_image, Action<UpdateProfileResponce> response)
     {
         UIManager.instance.ToggleLoadingPanel(true);
 
-        UpdateProfileClass _rawdata = new UpdateProfileClass(firstName, lastName, Dob, phone_no, profile_image);
-        string rawstring = JsonUtility.ToJson(_rawdata);
 
-        UnityWebRequest request = new UnityWebRequest(UPDATEPROFILE, "POST");
+        //UpdateProfileClass _rawdata = new UpdateProfileClass(firstName, lastName, Dob, phone_no, Profile_image);
+        //string rawstring = JsonUtility.ToJson(_rawdata);
 
-        byte[] bodyRaw = Encoding.UTF8.GetBytes(rawstring);
-        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = new DownloadHandlerBuffer();
-        //request.SetRequestHeader("api-key", "MAGICPIX");
+        // Convert RawImage to Texture2D
+        Texture2D tex = createReadabeTexture2D((Texture2D)profile_image.sprite.texture);
+        //byte[] pngData = tex.EncodeToPNG();
+        byte[] pngData = tex.EncodeToJPG(70);
+
+        // Create form
+        WWWForm form = new WWWForm();
+        form.AddField("firstName", firstName);
+        form.AddField("lastName", lastName);
+        form.AddField("Dob", Dob);
+        form.AddField("phone_no", phone_no);
+
+        // Add image to form
+        form.AddBinaryData("profile_image", pngData, "profile.png", "image/png");
+
+        //UnityWebRequest request = new UnityWebRequest(UPDATEPROFILE, "POST");
+        UnityWebRequest request = UnityWebRequest.Post(UPDATEPROFILE, form);
+
+        //byte[] bodyRaw = Encoding.UTF8.GetBytes(rawstring);
+        //request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        //request.downloadHandler = new DownloadHandlerBuffer();
+
         request.SetRequestHeader("Authorization", "Bearer " + ApiToken);
-        //request.SetRequestHeader("Accept", "application/json");
-        //request.SetRequestHeader("platform", "WEB");
+
 
         var callback = new UpdateProfileResponce();
         request.downloadHandler = new DownloadHandlerBuffer();
@@ -652,6 +672,41 @@ public class APIManager : MonoBehaviour
     #endregion
 
 
+    public Texture2D createReadabeTexture2D(Texture2D texture2d)
+    {
+
+        RenderTexture renderTexture = RenderTexture.GetTemporary(
+
+            texture2d.width,
+
+            texture2d.height,
+
+            0,
+
+            RenderTextureFormat.Default,
+
+            RenderTextureReadWrite.sRGB);
+
+        Graphics.Blit(texture2d, renderTexture);
+
+        RenderTexture previous = RenderTexture.active;
+
+        RenderTexture.active = renderTexture;
+
+        Texture2D readableTextur2D = new Texture2D(texture2d.width, texture2d.height, TextureFormat.RGB24, false, false);
+
+        readableTextur2D.ReadPixels(new Rect(0, 0, renderTexture.width, renderTexture.height), 0, 0);
+
+        readableTextur2D.Apply();
+
+        RenderTexture.active = previous;
+
+        RenderTexture.ReleaseTemporary(renderTexture);
+
+        return readableTextur2D;
+
+    }
+
 
 
 
@@ -728,6 +783,7 @@ public class APIManager : MonoBehaviour
             phone_no = Phone_no;
             profile_image = Profile_image;
         }
+
     }
 
     public class UpdatePassportClass

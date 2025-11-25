@@ -8,6 +8,7 @@ public class SignupPassword : MonoBehaviour
 
     public TMP_InputField _passwordInput;
     public Button _nextBtn, _backBtn;
+    public TextMeshProUGUI _errorMessage;
 
     private UIManager _uiManager;
 
@@ -29,6 +30,7 @@ public class SignupPassword : MonoBehaviour
         if (string.IsNullOrWhiteSpace(_passwordInput.text))
         {
             Debug.Log("Enter Valid password");
+            ErrorMessage("Password is not Null");
         }
         else if (ValidatePassword(_passwordInput.text) == false)
         {
@@ -43,6 +45,17 @@ public class SignupPassword : MonoBehaviour
 
     }
 
+    public void ErrorMessage(string _message)
+    {
+        _errorMessage.text = _message;
+        _errorMessage.gameObject.SetActive(true);
+        Invoke(nameof(OffMessage), 2f);
+    }
+    void OffMessage()
+    {
+        _errorMessage.gameObject.SetActive(false);
+    }
+
     public bool ValidatePassword(string password)
     {
         if (string.IsNullOrEmpty(password))
@@ -52,10 +65,10 @@ public class SignupPassword : MonoBehaviour
             return false;
         }
 
-        if (password.Length < 8)
+        if (password.Length < 7)
         {
-
-            Debug.Log("Password must be at least 8 characters");
+            ErrorMessage("Password have Minimum of 7 characters");
+            Debug.Log("Password must be at least 7 characters");
             return false;
         }
 
@@ -76,10 +89,25 @@ public class SignupPassword : MonoBehaviour
                 containsSpecialChar = true;
         }
 
-        if (!containsUppercase || !containsLowercase || !containsDigit || !containsSpecialChar)
+        if (!containsUppercase)
         {
-            Debug.Log("password must be alphanumeric");
-            //PasswordError();
+            Debug.Log("password must have Uppercase characters");
+            ErrorMessage("Password must have Uppercase characters");
+        }
+        else if (!containsLowercase)
+        {
+            Debug.Log("password must have Lowercase characters");
+            ErrorMessage("Password must have Lowercase characters");
+        }
+        else if (!containsDigit)
+        {
+            Debug.Log("password must have Digit");
+            ErrorMessage("Password must have Digit");
+        }
+        else if (!containsSpecialChar)
+        {
+            Debug.Log("password must have Special characters");
+            ErrorMessage("Password must have Special characters");
         }
 
         return containsUppercase && containsLowercase && containsDigit && containsSpecialChar;

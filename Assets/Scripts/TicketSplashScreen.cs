@@ -22,7 +22,7 @@ public class TicketSplashScreen : MonoBehaviour
 
     void Start()
     {
-        UIManager.instance._splaceScreenVideo.SetDirectAudioMute(0,true);
+        //UIManager.instance._splaceScreenVideo.SetDirectAudioMute(0,true);
         // Ensure DOTween is initialized
         DOTween.Init(false, true);
 

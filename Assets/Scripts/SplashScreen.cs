@@ -8,7 +8,16 @@ public class SplashScreen : MonoBehaviour
 
     public void SwithToLogin()
     {
-        UIManager.instance.SwitchScreen(1);
+        if (PlayerPrefs.HasKey("Login"))
+        {
+            UIManager.instance.SwitchScreen(2);
+            UIManager.instance._splaceScreenVideo.SetDirectAudioMute(0, true);
+        }
+        else
+        {
+            UIManager.instance.SwitchScreen(1);
+        }
+        
     }
 
     private void Update()

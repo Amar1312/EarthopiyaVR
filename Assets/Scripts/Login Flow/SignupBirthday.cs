@@ -6,6 +6,7 @@ public class SignupBirthday : MonoBehaviour
 {
     public Button _enterBtn, _backBtn;
     public TMP_InputField _dateOfBirthInput;
+    public TextMeshProUGUI _errorMessage;
 
     public string _email;
     public string _password;
@@ -26,11 +27,11 @@ public class SignupBirthday : MonoBehaviour
         if (string.IsNullOrWhiteSpace(_dateOfBirthInput.text))
         {
             Debug.Log("Enter Date of Birth");
+            ErrorMessage("Enter valid Date of Birth");
         }
         else
         {
-            _uiManager.SwitchScreen(2);
-            //APIManager.Instance.SignUp(_email, _firstName, _lastName, _dateOfBirthInput.text, _password, _password, SignUpResponse);
+            APIManager.Instance.SignUp(_email, _firstName, _lastName, _dateOfBirthInput.text, _password, _password, SignUpResponse);
         }
     }
 
@@ -43,8 +44,20 @@ public class SignupBirthday : MonoBehaviour
     {
         if (responces.status)
         {
+            _uiManager.SwitchScreen(2);
             DataManager.Instance._userData = responces;
+            _uiManager._splaceScreenVideo.SetDirectAudioMute(0, true);
         }
     }
 
+    public void ErrorMessage(string _message)
+    {
+        _errorMessage.text = _message;
+        _errorMessage.gameObject.SetActive(true);
+        Invoke(nameof(OffMessage), 2f);
+    }
+    void OffMessage()
+    {
+        _errorMessage.gameObject.SetActive(false);
+    }
 }

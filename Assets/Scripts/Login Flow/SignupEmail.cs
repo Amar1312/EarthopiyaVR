@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using UnityEngine.UI;
 using TMPro;
 using System.Text.RegularExpressions;
@@ -6,6 +7,7 @@ public class SignupEmail : MonoBehaviour
 {
     public TMP_InputField _emailInput;
     public Button _nextBtn, _backBtn;
+    public TextMeshProUGUI _errorMessage;
 
     private UIManager _uiManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,11 +29,12 @@ public class SignupEmail : MonoBehaviour
         if (string.IsNullOrWhiteSpace(_emailInput.text))
         {
             Debug.Log("Enter Valid Email");
+            ErrorMessage("Email not Null");
             return;
         }
         else if (!value)
         {
-            //_emailErrorMessage.SetActive(true);
+            ErrorMessage("Enter Valid Email");
             Debug.Log("Enter Valid Email");
 
         }
@@ -43,6 +46,17 @@ public class SignupEmail : MonoBehaviour
             _uiManager.SwitchLoginScreen(7);
         }
 
+    }
+
+    public void ErrorMessage(string _message)
+    {
+        _errorMessage.text = _message;
+        _errorMessage.gameObject.SetActive(true);
+        Invoke(nameof(OffMessage),2f);
+    }
+    void OffMessage()
+    {
+        _errorMessage.gameObject.SetActive(false);
     }
 
 

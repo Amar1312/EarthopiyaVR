@@ -7,6 +7,7 @@ public class DataManager : MonoBehaviour
 
     public LoginResponce _userData;
 
+
     private void Awake()
     {
         if (Instance == null)
