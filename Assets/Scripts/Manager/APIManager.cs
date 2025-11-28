@@ -5,11 +5,12 @@ using UnityEngine.UI;
 using System;
 using UnityEngine.Networking;
 using System.Text;
+using SignInSample;
 
 public class APIManager : MonoBehaviour
 {
     public static APIManager Instance;
-    private const string APIBASEURL = "http://ec2-34-232-219-196.compute-1.amazonaws.com/api";
+    private const string APIBASEURL = "https://app.earthopya.com/api";
     private const string LOGIN = APIBASEURL + "/signin";
     private const string SIGNUP = APIBASEURL + "/signup";
     private const string SOCIALLOGIN = APIBASEURL + "/social-login";
@@ -21,6 +22,7 @@ public class APIManager : MonoBehaviour
     private const string LOGOUT = APIBASEURL + "/logout";
 
 
+    public SigninSampleScript _googleLoginIn;
     public string ApiToken;
     private void Awake()
     {
@@ -245,7 +247,7 @@ public class APIManager : MonoBehaviour
             Debug.Log("SocialLogin unAuthorized");
             callback.status = false;
             callback.message = "Unauthorized";
-            //UnauthorizedUser();
+            UnauthorizedUser();
         }
         else
         {
@@ -311,7 +313,7 @@ public class APIManager : MonoBehaviour
             Debug.Log("unAuthorized Get Profile");
             callback.status = false;
             callback.message = "Unauthorized";
-            //UnauthorizedUser();
+            UnauthorizedUser();
         }
         else
         {
@@ -332,7 +334,7 @@ public class APIManager : MonoBehaviour
 
     #region Update Profile
 
-    public void UpdateProfile(string _firstName, string _lastName, string _DateOFBirth, string _phone_no, Image _profile_image, Action<UpdateProfileResponce> response)
+    public void UpdateProfile(string _firstName, string _lastName, string _DateOFBirth, string _phone_no, Image _profile_image, Action<ProfileResponce> response)
     {
         CheckInternet(status =>
         {
@@ -343,48 +345,28 @@ public class APIManager : MonoBehaviour
         });
     }
 
-    private IEnumerator UpdateProfileIEnum(string firstName, string lastName, string Dob, string phone_no, Image profile_image, Action<UpdateProfileResponce> response)
+    private IEnumerator UpdateProfileIEnum(string firstName, string lastName, string Dob, string phone_no, Image profile_image, Action<ProfileResponce> response)
     {
         UIManager.instance.ToggleLoadingPanel(true);
 
-
-        //UpdateProfileClass _rawdata = new UpdateProfileClass(firstName, lastName, Dob, phone_no, Profile_image);
-        //string rawstring = JsonUtility.ToJson(_rawdata);
-
-        // Convert RawImage to Texture2D
         Texture2D tex = createReadabeTexture2D((Texture2D)profile_image.sprite.texture);
-        //byte[] pngData = tex.EncodeToPNG();
         byte[] pngData = tex.EncodeToJPG(70);
-
-        // Create form
         WWWForm form = new WWWForm();
-        form.AddField("firstName", firstName);
-        form.AddField("lastName", lastName);
-        form.AddField("Dob", Dob);
+        form.AddField("firstname", firstName);
+        form.AddField("lastname", lastName);
+        form.AddField("dob", Dob);
         form.AddField("phone_no", phone_no);
-
-        // Add image to form
         form.AddBinaryData("profile_image", pngData, "profile.png", "image/png");
-
-        //UnityWebRequest request = new UnityWebRequest(UPDATEPROFILE, "POST");
         UnityWebRequest request = UnityWebRequest.Post(UPDATEPROFILE, form);
-
-        //byte[] bodyRaw = Encoding.UTF8.GetBytes(rawstring);
-        //request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-        //request.downloadHandler = new DownloadHandlerBuffer();
-
         request.SetRequestHeader("Authorization", "Bearer " + ApiToken);
-
-
-        var callback = new UpdateProfileResponce();
+        var callback = new ProfileResponce();
         request.downloadHandler = new DownloadHandlerBuffer();
-
         yield return request.SendWebRequest();
 
         if (request.responseCode == 200 || request.responseCode == 201)
         {
             Debug.Log("Update Profile Response: " + request.downloadHandler.text);
-            callback = JsonUtility.FromJson<UpdateProfileResponce>(request.downloadHandler.text);
+            callback = JsonUtility.FromJson<ProfileResponce>(request.downloadHandler.text);
             callback.status = true;
         }
         else if (request.responseCode == 401)
@@ -392,11 +374,11 @@ public class APIManager : MonoBehaviour
             Debug.Log("Update Profile unAuthorized");
             callback.status = false;
             callback.message = "Unauthorized";
-            //UnauthorizedUser();
+            UnauthorizedUser();
         }
         else
         {
-            callback = JsonUtility.FromJson<UpdateProfileResponce>(request.downloadHandler.text);
+            callback = JsonUtility.FromJson<ProfileResponce>(request.downloadHandler.text);
             callback.status = false;
             if (callback.message == "")
                 callback.message = "Something went worng";
@@ -459,7 +441,7 @@ public class APIManager : MonoBehaviour
             Debug.Log("Update Passport unAuthorized");
             callback.status = false;
             callback.message = "Unauthorized";
-            //UnauthorizedUser();
+            UnauthorizedUser();
         }
         else
         {
@@ -480,22 +462,22 @@ public class APIManager : MonoBehaviour
     #endregion
 
     #region Delete Account 
-    public void DeleteAccount(string _emailAddress, string _password, Action<DeleteAccountResponce> response)
+    public void DeleteAccount(string _emailAddress, string _password, int Is_delete, Action<DeleteAccountResponce> response)
     {
         CheckInternet(status =>
         {
             if (status)
-                StartCoroutine(DeleteAccountIEnum(_emailAddress, _password, response));
+                StartCoroutine(DeleteAccountIEnum(_emailAddress, _password, Is_delete, response));
             else
                 Debug.Log("Error No Internet Connection");
         });
     }
 
-    private IEnumerator DeleteAccountIEnum(string email, string password, Action<DeleteAccountResponce> response)
+    private IEnumerator DeleteAccountIEnum(string email, string password, int Is_delete, Action<DeleteAccountResponce> response)
     {
         UIManager.instance.ToggleLoadingPanel(true);
 
-        DeleteAccountClass _rawdata = new DeleteAccountClass(email, password);
+        DeleteAccountClass _rawdata = new DeleteAccountClass(email, password, Is_delete);
         string rawstring = JsonUtility.ToJson(_rawdata);
 
         UnityWebRequest request = new UnityWebRequest(DELETEACCOUNT, "POST");
@@ -504,7 +486,9 @@ public class APIManager : MonoBehaviour
         request.uploadHandler = new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = new DownloadHandlerBuffer();
 
-        request.SetRequestHeader("Authorization", "Bearer " + ApiToken);
+        //request.SetRequestHeader("Authorization", "Bearer " + ApiToken);
+        request.SetRequestHeader("Content-Type", "application/json");
+
 
         var callback = new DeleteAccountResponce();
         request.downloadHandler = new DownloadHandlerBuffer();
@@ -523,7 +507,7 @@ public class APIManager : MonoBehaviour
             Debug.Log("Delete Account unAuthorized");
             callback.status = false;
             callback.message = "Unauthorized";
-            //UnauthorizedUser();
+            UnauthorizedUser();
         }
         else
         {
@@ -588,7 +572,7 @@ public class APIManager : MonoBehaviour
             Debug.Log("Delete Social Account unAuthorized");
             callback.status = false;
             callback.message = "Unauthorized";
-            //UnauthorizedUser();
+            UnauthorizedUser();
         }
         else
         {
@@ -652,7 +636,7 @@ public class APIManager : MonoBehaviour
             Debug.Log("unAuthorized LogOut");
             callback.status = false;
             callback.message = "Unauthorized";
-            //UnauthorizedUser();
+            UnauthorizedUser();
         }
         else
         {
@@ -707,6 +691,17 @@ public class APIManager : MonoBehaviour
 
     }
 
+    public void UnauthorizedUser()
+    {
+        PlayerPrefs.DeleteKey("ApiToken");
+        PlayerPrefs.DeleteKey("Login");
+        UIManager.instance.SwitchLoginScreen(0);
+        UIManager.instance.SwitchScreen(1);
+        //if (_type == "google")
+        //{
+        //    _googleLoginIn.OnSignOut();
+        //}
+    }
 
 
 
@@ -799,10 +794,12 @@ public class APIManager : MonoBehaviour
     {
         public string email;
         public string password;
-        public DeleteAccountClass(string Email, string Password)
+        public int is_delete;
+        public DeleteAccountClass(string Email, string Password, int Is_Delete)
         {
             email = Email;
             password = Password;
+            is_delete = Is_Delete;
         }
     }
 
@@ -819,9 +816,9 @@ public class APIManager : MonoBehaviour
 
     public class LogOutClass
     {
+
         public LogOutClass()
         {
-
         }
     }
 

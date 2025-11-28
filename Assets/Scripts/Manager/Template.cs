@@ -87,32 +87,32 @@ public class Profile
 
 #endregion
 
-#region Update Profile
-[Serializable]
-public class UpdateProfileResponce
-{
-    public bool status;
-    public string message;
-    public UpdateProfile_Data data;
-}
-[Serializable]
-public class UpdateProfile_Data
-{
-    public UpdateProfile user;
-}
-[Serializable]
-public class UpdateProfile
-{
-    public int id;
-    public string email;
-    public string firstname;
-    public string lastname;
-    public string dob;
-    public string phone_no;
-    public string profile_image_url;
-    public List<string> passport;
-}
-#endregion
+//#region Update Profile
+//[Serializable]
+//public class UpdateProfileResponce
+//{
+//    public bool status;
+//    public string message;
+//    public UpdateProfile_Data data;
+//}
+//[Serializable]
+//public class UpdateProfile_Data
+//{
+//    public UpdateProfile user;
+//}
+//[Serializable]
+//public class UpdateProfile
+//{
+//    public int id;
+//    public string email;
+//    public string firstname;
+//    public string lastname;
+//    public string dob;
+//    public string phone_no;
+//    public string profile_image_url;
+//    public List<string> passport;
+//}
+//#endregion
 
 #region UpdatePassport
 [Serializable]

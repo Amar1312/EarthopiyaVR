@@ -6,6 +6,11 @@ public class SplashScreen : MonoBehaviour
     public VideoPlayer _videoSplash;
     public Animator _animator;
 
+    private void Start()
+    {
+
+    }
+
     public void SwithToLogin()
     {
         if (PlayerPrefs.HasKey("Login"))

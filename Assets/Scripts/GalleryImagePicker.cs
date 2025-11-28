@@ -9,6 +9,7 @@ public class GalleryImagePicker : MonoBehaviour
 {
     public Button _camaraBtn;
     public Image profile_image;
+    public GameObject _MaskingImage;
     public int maxSize = 1024;
     public float _profileWidth = 510f;
 
@@ -57,6 +58,8 @@ public class GalleryImagePicker : MonoBehaviour
                 profile_image.sprite = TextureToSprite(texture);
                 UIManager.instance._profilePanel._saveBtn.gameObject.SetActive(true);
                 UIManager.instance.SetMaxSize(_profileWidth, profile_image);
+                profile_image.gameObject.SetActive(true);
+                _MaskingImage.SetActive(true);
             }
             else
             {

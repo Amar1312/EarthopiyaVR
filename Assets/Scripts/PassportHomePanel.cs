@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using System.Globalization;
+using UnityEngine.EventSystems;
 
 public class PassportHomePanel : MonoBehaviour
 {
@@ -11,12 +12,20 @@ public class PassportHomePanel : MonoBehaviour
     public Image _passportImage;
     public GameObject _passportImageParent;
     public float _passportWidth;
+    public ScrollRect _safariScroll;
+    public GameObject _startSafari;
+
 
     private UIManager _uiManager;
+    private bool oneTime = false;
 
     private void OnEnable()
     {
         GetProfileAPiCall();
+        if (oneTime)
+        {
+            _startSafari.SetActive(false);
+        }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,12 +34,13 @@ public class PassportHomePanel : MonoBehaviour
         _settingBtn.onClick.AddListener(SettingBtnClick);
         _editBtn.onClick.AddListener(EditBtnClick);
         _qrBtn.onClick.AddListener(QRBtnClick);
+        _safariScroll.onValueChanged.AddListener(OnScrollValueChanged);
     }
 
 
     void SettingBtnClick()
     {
-
+        EditBtnClick();
     }
 
     void EditBtnClick()
@@ -42,6 +52,15 @@ public class PassportHomePanel : MonoBehaviour
     {
 
     }
+
+    private void OnScrollValueChanged(Vector2 value)
+    {
+        if (_startSafari.activeInHierarchy)
+        {
+            _startSafari.SetActive(false);
+        }
+    }
+
     public void GetProfileAPiCall()
     {
         APIManager.Instance.GetProfile(GetProfileResponce);
@@ -54,6 +73,7 @@ public class PassportHomePanel : MonoBehaviour
             _surName.text = responce.data.user.lastname;
             _givenName.text = responce.data.user.firstname;
             _doBirth.text = FormatDate(responce.data.user.dob);
+            responce.data.user.dob = ConvertToSlashFormat(responce.data.user.dob);
 
             if (!string.IsNullOrWhiteSpace(responce.data.user.profile_image_url))
             {
@@ -65,7 +85,16 @@ public class PassportHomePanel : MonoBehaviour
                 _passportImageParent.gameObject.SetActive(false);
             }
 
-            UIManager.instance._profilePanel._profileData = responce;
+            DataManager.Instance._profileData = responce;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (!oneTime)
+        {
+            _startSafari.SetActive(false);
+            oneTime = true;
         }
     }
 
@@ -79,7 +108,7 @@ public class PassportHomePanel : MonoBehaviour
         // Format: year = yyyy, then day = dd, then month = MM
         if (DateTime.TryParseExact(
             input,
-            "yyyy-dd-MM",
+            "yyyy-MM-dd",
             CultureInfo.InvariantCulture,
             DateTimeStyles.None,
             out DateTime dt))
@@ -97,5 +126,22 @@ public class PassportHomePanel : MonoBehaviour
             // fallback: input not in expected format
             return null;
         }
+    }
+
+    public string ConvertToSlashFormat(string date)
+    {
+        //DateTime d = DateTime.ParseExact(date, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+        //return d.ToString("dd'/'MM'/'yyyy");
+
+        if (string.IsNullOrWhiteSpace(date))
+        {
+            return null;
+        }
+        else if (DateTime.TryParseExact(date, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime d))
+        {
+            return d.ToString("dd'/'MM'/'yyyy");
+        }
+
+        return null;
     }
 }

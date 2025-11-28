@@ -34,6 +34,7 @@ public class UIManager : MonoBehaviour
     public PassportHomePanel _passportPanel;
     public ProfilePanel _profilePanel;
 
+
     #endregion
 
 
@@ -56,6 +57,17 @@ public class UIManager : MonoBehaviour
     {
         Application.targetFrameRate = 30;
 
+        int startPanel = SceneController.Instance._gameOn;
+        if (startPanel == 0)
+        {
+            SwitchScreen(0);
+        }
+        else if (startPanel == 1)
+        {
+            SwitchScreen(10);
+            _splaceScreenVideo.SetDirectAudioMute(0, true);
+        }
+
         _ticketsBtnSafari.onClick.AddListener(TicketBtnClick);
         _ticketBtnPassport.onClick.AddListener(TicketBtnClick);
         _safariBtnTicket.onClick.AddListener(SafariBtnClick);
@@ -77,6 +89,7 @@ public class UIManager : MonoBehaviour
     void PassportBtnClick()
     {
         SwitchScreen(11);
+
     }
 
     // Switch to a specific screen by index

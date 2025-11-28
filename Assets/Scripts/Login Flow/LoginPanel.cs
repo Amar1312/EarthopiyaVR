@@ -62,7 +62,18 @@ public class LoginPanel : MonoBehaviour
         }
         else
         {
-            _uiManager.SwitchLoginScreen(1);
+            if (responces.message == "Entered email is invalid.")
+            {
+                _uiManager.SwitchLoginScreen(2);
+            }
+            else if (responces.message == "Entered password is invalid.")
+            {
+                _uiManager.SwitchLoginScreen(1);
+            }
+            else
+            {
+                _uiManager.SwitchLoginScreen(2);
+            }
         }
     }
 }
