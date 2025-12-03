@@ -3,6 +3,9 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.XR.Management;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR;
+using System.Collections.Generic;
+using System.Linq;
 
 public class AnimalSafariPanel : MonoBehaviour
 {
@@ -34,6 +37,18 @@ public class AnimalSafariPanel : MonoBehaviour
         xrManager.StopSubsystems();
         xrManager.DeinitializeLoader();
         yield return new WaitForSeconds(0.1f);
+        //var arcoreLoader = xrManager.loaders.FirstOrDefault(l => l.name.Contains("ARCore"));
+        //xrManager.TryRemoveLoader(arcoreLoader);
+
+        //foreach (var l in xrManager.loaders.ToArray())
+        //    xrManager.TryRemoveLoader(l);
+
+        //yield return new WaitForSeconds(0.2f);
+
+
+        var cardboardLoader = xrManager.loaders.FirstOrDefault(l => l.name.Contains("Cardboard"));
+
+        xrManager.TrySetLoaders(new List<XRLoader> { cardboardLoader });
 
         //  Initialize XR
         yield return xrManager.InitializeLoader();
@@ -52,6 +67,7 @@ public class AnimalSafariPanel : MonoBehaviour
 
         SceneController.Instance._gameOn = 1;
         SceneManager.LoadScene(1);
+
     }
 
 }

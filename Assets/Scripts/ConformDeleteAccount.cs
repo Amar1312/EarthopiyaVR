@@ -55,7 +55,8 @@ public class ConformDeleteAccount : MonoBehaviour
             PlayerPrefs.DeleteKey("Login");
             UIManager.instance.SwitchLoginScreen(0);
             UIManager.instance.SwitchScreen(1);
-            if(_type == "google")
+            UIManager.instance._splaceScreenVideo.SetDirectAudioMute(0, false);
+            if (_type == "google")
             {
                 _googleLoginIn.OnSignOut();
             }

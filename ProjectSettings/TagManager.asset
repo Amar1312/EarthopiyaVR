@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Test2
   - Water
   - UI
   - Interactive
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Test2
+    uniqueID: 580209949
     locked: 0
   m_RenderingLayers:
   - Default

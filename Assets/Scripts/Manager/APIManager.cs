@@ -21,7 +21,6 @@ public class APIManager : MonoBehaviour
     private const string DELETESOCIALACCOUNT = APIBASEURL + "/delete-social-account";
     private const string LOGOUT = APIBASEURL + "/logout";
 
-
     public SigninSampleScript _googleLoginIn;
     public string ApiToken;
     private void Awake()
@@ -175,7 +174,7 @@ public class APIManager : MonoBehaviour
         {
             Debug.Log("Sign UP unAuthorized");
             callback.status = false;
-            callback.message = "Unauthorized";
+            callback.message = "Unauthorized Usaer";
         }
         else
         {
@@ -697,6 +696,7 @@ public class APIManager : MonoBehaviour
         PlayerPrefs.DeleteKey("Login");
         UIManager.instance.SwitchLoginScreen(0);
         UIManager.instance.SwitchScreen(1);
+        UIManager.instance._splaceScreenVideo.SetDirectAudioMute(0, false);
         //if (_type == "google")
         //{
         //    _googleLoginIn.OnSignOut();

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using DanielLochner.Assets.SimpleScrollSnap;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SelectAnimalScroll : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class SelectAnimalScroll : MonoBehaviour
     public List<RectTransform> _mapDestinetionPoint;
     public List<GameObject> _titleName;
     public GameObject _selectTitle;
+    public Button _qrBtn;
 
     public int _pointIndex;
 
@@ -37,6 +39,7 @@ public class SelectAnimalScroll : MonoBehaviour
         {
             _scrollImage.Add(item.gameObject.GetComponent<MainImageScroll>());
         }
+        _qrBtn.onClick.AddListener(QRBtnClick);
     }
     public void SelectImageItem()
     {
@@ -143,6 +146,11 @@ public class SelectAnimalScroll : MonoBehaviour
     public void ScrollValueUpdate()
     {
         Debug.Log("On scroll value update :" + _bar.value);
+    }
+
+    public void QRBtnClick()
+    {
+        //SceneManager.LoadScene(2);
     }
 
 }

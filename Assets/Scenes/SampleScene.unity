@@ -1866,7 +1866,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 79.44444}
+  m_SizeDelta: {x: 100, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30314900
 MonoBehaviour:
@@ -2360,10 +2360,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 203279074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 442.57144, y: -1320.5}
-  m_SizeDelta: {x: 759.1429, y: 25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &36501123
 MonoBehaviour:
@@ -2379,7 +2379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6215,7 +6215,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -10, y: -120}
-  m_SizeDelta: {x: 650, y: 50}
+  m_SizeDelta: {x: 750, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &98721978
 MonoBehaviour:
@@ -6237,7 +6237,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: '`'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d9bafe603028b141a6fe8f8c5e1f02f, type: 2}
   m_sharedMaterial: {fileID: -8712213404719183052, guid: 2d9bafe603028b141a6fe8f8c5e1f02f, type: 2}
@@ -7542,7 +7542,7 @@ RectTransform:
   m_Father: {fileID: 1309939204}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.99998987, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7673,6 +7673,96 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113958730}
+  m_CullTransparentMesh: 1
+--- !u!1 &114103357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 114103358}
+  - component: {fileID: 114103361}
+  - component: {fileID: 114103360}
+  - component: {fileID: 114103359}
+  m_Layer: 5
+  m_Name: Viewport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &114103358
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114103357}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2127112662}
+  m_Father: {fileID: 1918624793}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -7, y: 0}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &114103359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114103357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 0
+--- !u!114 &114103360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114103357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &114103361
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114103357}
   m_CullTransparentMesh: 1
 --- !u!1 &120326595
 GameObject:
@@ -10814,10 +10904,10 @@ RectTransform:
   - {fileID: 954969393}
   m_Father: {fileID: 203279074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 63, y: -659}
-  m_SizeDelta: {x: 759.1429, y: 60}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 60}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &167446662
 MonoBehaviour:
@@ -11471,7 +11561,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: 30, y: 22.173914}
+  m_SizeDelta: {x: 30, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &178335517
 MonoBehaviour:
@@ -11847,6 +11937,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181327490}
   m_CullTransparentMesh: 1
+--- !u!224 &182038130 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+  m_PrefabInstance: {fileID: 905045692808340879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &183266168
 GameObject:
   m_ObjectHideFlags: 0
@@ -12276,7 +12371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -13068,7 +13163,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 2193}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &203279075
 MonoBehaviour:
@@ -15833,7 +15928,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Del Safari
+  m_text: Last Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dfa89e63b5220c94b9d1c05861282147, type: 2}
   m_sharedMaterial: {fileID: 8573671968333822760, guid: dfa89e63b5220c94b9d1c05861282147, type: 2}
@@ -17833,12 +17928,13 @@ RectTransform:
   - {fileID: 330698101}
   - {fileID: 178335516}
   - {fileID: 1387639707}
+  - {fileID: 1197744951}
   m_Father: {fileID: 203279074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 442.57144, y: -993.5}
-  m_SizeDelta: {x: 759.1429, y: 113}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 113}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &275522032
 MonoBehaviour:
@@ -18390,10 +18486,10 @@ RectTransform:
   - {fileID: 2129060935}
   m_Father: {fileID: 203279074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 442.57144, y: -1226.5}
-  m_SizeDelta: {x: 759.1429, y: 113}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 113}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &280901968
 MonoBehaviour:
@@ -18510,7 +18606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.62352943, g: 0.6784314, b: 0.62352943, a: 0.69803923}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -18569,9 +18665,9 @@ RectTransform:
   m_Father: {fileID: 2072543447}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -2, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &282898777
 MonoBehaviour:
@@ -18661,7 +18757,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -9.6, y: 0}
-  m_SizeDelta: {x: 90, y: 90}
+  m_SizeDelta: {x: 90, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &284018358
 MonoBehaviour:
@@ -19259,7 +19355,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 75, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &289062673
 MonoBehaviour:
@@ -20543,10 +20639,10 @@ RectTransform:
   - {fileID: 1220145177}
   m_Father: {fileID: 203279074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 442.57144, y: -324.5}
-  m_SizeDelta: {x: 759.1429, y: 113}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 113}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &308231192
 MonoBehaviour:
@@ -21773,7 +21869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &330585544
 AudioListener:
   m_ObjectHideFlags: 0
@@ -21791,7 +21887,7 @@ Camera:
   m_GameObject: {fileID: 330585543}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -26109,7 +26205,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 111867571}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.99998987
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -27506,116 +27602,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404394969}
   m_CullTransparentMesh: 1
---- !u!1 &410087039
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 410087041}
-  - component: {fileID: 410087040}
-  - component: {fileID: 410087042}
-  m_Layer: 0
-  m_Name: Directional Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &410087040
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410087039}
-  m_Enabled: 1
-  serializedVersion: 11
-  m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 5000
-  m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ForceVisible: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_LightUnit: 1
-  m_LuxAtDistance: 1
-  m_EnableSpotReflector: 1
---- !u!4 &410087041
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410087039}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &410087042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410087039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &412345268
 GameObject:
   m_ObjectHideFlags: 0
@@ -31367,6 +31353,128 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457235675}
   m_CullTransparentMesh: 1
+--- !u!1001 &460984228
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2127112662}
+    m_Modifications:
+    - target: {fileID: 2685961798022817996, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_Name
+      value: Dial Code Data (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685961798022817996, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685961798022817996, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299997313258422869, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670355622445862319, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204188450278312525, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+--- !u!224 &460984229 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+  m_PrefabInstance: {fileID: 460984228}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &461680960
 GameObject:
   m_ObjectHideFlags: 0
@@ -33538,7 +33646,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: 35.820896}
+  m_SizeDelta: {x: 40, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &486647888
 MonoBehaviour:
@@ -37127,7 +37235,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Rey
+  m_text: First Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dfa89e63b5220c94b9d1c05861282147, type: 2}
   m_sharedMaterial: {fileID: 8573671968333822760, guid: dfa89e63b5220c94b9d1c05861282147, type: 2}
@@ -41853,7 +41961,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: 30, y: 22.173914}
+  m_SizeDelta: {x: 30, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &585648256
 MonoBehaviour:
@@ -42298,6 +42406,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590422567}
   m_CullTransparentMesh: 1
+--- !u!1 &592069227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 592069228}
+  m_Layer: 5
+  m_Name: Sliding Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &592069228
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592069227}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1969321021}
+  m_Father: {fileID: 1949309582}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &593162986
 GameObject:
   m_ObjectHideFlags: 0
@@ -43266,7 +43410,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: -78}
-  m_SizeDelta: {x: 248.5, y: 248.5}
+  m_SizeDelta: {x: 248.5, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &606829664
 MonoBehaviour:
@@ -43579,6 +43723,7 @@ RectTransform:
   - {fileID: 1958604444}
   - {fileID: 1248468549}
   - {fileID: 645119010}
+  - {fileID: 1506932332}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -57068,7 +57213,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: 30, y: 22.173914}
+  m_SizeDelta: {x: 30, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &840114934
 MonoBehaviour:
@@ -58597,10 +58742,10 @@ RectTransform:
   - {fileID: 1037873678}
   m_Father: {fileID: 203279074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 63, y: -1110}
-  m_SizeDelta: {x: 759.1429, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 70}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &857774331
 MonoBehaviour:
@@ -58616,7 +58761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -65734,7 +65879,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008726472}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -65834,7 +65979,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1010320423}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -65961,7 +66106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: earthopya@gmail.com
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dfa89e63b5220c94b9d1c05861282147, type: 2}
   m_sharedMaterial: {fileID: 8573671968333822760, guid: dfa89e63b5220c94b9d1c05861282147, type: 2}
@@ -66667,10 +66812,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 203279074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 63, y: -436}
-  m_SizeDelta: {x: 759.1429, y: 60}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 60}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1022809606
 MonoBehaviour:
@@ -66815,7 +66960,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0003532483, y: 0}
+  m_AnchoredPosition: {x: -0.000027656555, y: 0}
   m_SizeDelta: {x: -887.1429, y: 350}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1024628776
@@ -78819,6 +78964,108 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196380685}
   m_CullTransparentMesh: 1
+--- !u!1 &1197744950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1197744951}
+  - component: {fileID: 1197744954}
+  - component: {fileID: 1197744953}
+  - component: {fileID: 1197744952}
+  m_Layer: 5
+  m_Name: Dial Code Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1197744951
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197744950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1918624793}
+  m_Father: {fileID: 275522031}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1197744952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197744950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1197744953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197744950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1197744954
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197744950}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 2
+  m_TargetDisplay: 0
 --- !u!1 &1198643389
 GameObject:
   m_ObjectHideFlags: 0
@@ -80357,7 +80604,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: 30, y: 22.173914}
+  m_SizeDelta: {x: 30, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1220145178
 MonoBehaviour:
@@ -82225,6 +82472,103 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251739250}
   m_CullTransparentMesh: 1
+--- !u!1 &1254570878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1254570880}
+  - component: {fileID: 1254570879}
+  m_Layer: 0
+  m_Name: Directional light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1254570879
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254570878}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1.3
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!4 &1254570880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254570878}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 38.556553, y: 146.8352, z: -51.387547}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1255305832
 GameObject:
   m_ObjectHideFlags: 0
@@ -83922,6 +84266,107 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281187108}
   m_CullTransparentMesh: 1
+--- !u!1 &1281281112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1281281117}
+  - component: {fileID: 1281281116}
+  - component: {fileID: 1281281114}
+  - component: {fileID: 1281281113}
+  m_Layer: 0
+  m_Name: Main Camera MapBox
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1281281113
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281281112}
+  m_Enabled: 1
+--- !u!124 &1281281114
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281281112}
+  m_Enabled: 1
+--- !u!20 &1281281116
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281281112}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.13235295, g: 0.13235295, b: 0.13235295, a: 1}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 1
+  far clip plane: 5000
+  field of view: 33
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1281281117
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281281112}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -4500}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1282880304
 GameObject:
   m_ObjectHideFlags: 0
@@ -84180,10 +84625,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 203279074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 63, y: -882}
-  m_SizeDelta: {x: 759.1429, y: 60}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 60}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1287041981
 MonoBehaviour:
@@ -86598,6 +87043,7 @@ MonoBehaviour:
   - {fileID: 1070919134}
   - {fileID: 1105906954}
   _selectTitle: {fileID: 700636697}
+  _qrBtn: {fileID: 549535945}
   _pointIndex: 0
 --- !u!114 &1328174084
 MonoBehaviour:
@@ -90111,8 +90557,9 @@ GameObject:
   - component: {fileID: 1387639707}
   - component: {fileID: 1387639709}
   - component: {fileID: 1387639708}
+  - component: {fileID: 1387639710}
   m_Layer: 5
-  m_Name: Country Code Text (TMP)
+  m_Name: Dial Code Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90129,7 +90576,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1460330179}
   m_Father: {fileID: 275522031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
@@ -90157,7 +90605,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +31
+  m_text: '+31
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dfa89e63b5220c94b9d1c05861282147, type: 2}
   m_sharedMaterial: {fileID: 8573671968333822760, guid: dfa89e63b5220c94b9d1c05861282147, type: 2}
@@ -90187,9 +90637,9 @@ MonoBehaviour:
   m_fontSize: 38
   m_fontSizeBase: 38
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 38
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -90236,6 +90686,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387639706}
   m_CullTransparentMesh: 1
+--- !u!114 &1387639710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387639706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1387639708}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1388089811
 GameObject:
   m_ObjectHideFlags: 0
@@ -92993,10 +93487,10 @@ RectTransform:
   - {fileID: 193134249}
   m_Father: {fileID: 203279074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 63, y: -1428}
-  m_SizeDelta: {x: 759.1429, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 70}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1431785762
 MonoBehaviour:
@@ -93012,7 +93506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -94632,7 +95126,7 @@ GameObject:
   - component: {fileID: 1459142858}
   - component: {fileID: 1459142857}
   m_Layer: 5
-  m_Name: Delete Sccount Button
+  m_Name: Delete account Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94739,6 +95233,96 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459142855}
+  m_CullTransparentMesh: 1
+--- !u!1 &1460330178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1460330179}
+  - component: {fileID: 1460330182}
+  - component: {fileID: 1460330181}
+  - component: {fileID: 1460330180}
+  m_Layer: 5
+  m_Name: ArrowImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1460330179
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460330178}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1387639707}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 95, y: -3}
+  m_SizeDelta: {x: 11, y: 0}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &1460330180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460330178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 1
+  m_AspectRatio: 0.5625
+--- !u!114 &1460330181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460330178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.15294118, g: 0.15294118, b: 0.14901961, a: 0.8}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 98bd4c9b1471720489f5411c44702ab1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1460330182
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460330178}
   m_CullTransparentMesh: 1
 --- !u!1 &1460331402
 GameObject:
@@ -95801,6 +96385,7 @@ GameObject:
   - component: {fileID: 1471970049}
   - component: {fileID: 1471970051}
   - component: {fileID: 1471970052}
+  - component: {fileID: 1471970053}
   m_Layer: 5
   m_Name: Edit Profile Panel
   m_TagString: Untagged
@@ -95890,10 +96475,13 @@ MonoBehaviour:
   _saveBtn: {fileID: 2038408908}
   _backBtn: {fileID: 1917823527}
   _delateBtn: {fileID: 2012995518}
+  _dialCodeBtn: {fileID: 1387639710}
   _profileImage: {fileID: 880341322}
   _maskingImage: {fileID: 1262381171}
   _updateSuccess: {fileID: 287862605}
   _errorMessage: {fileID: 954969394}
+  _dialText: {fileID: 1387639708}
+  _dialCodeScroll: {fileID: 1197744950}
   _methodLogo:
   - {fileID: 193134248}
   - {fileID: 1611891894}
@@ -95916,6 +96504,62 @@ MonoBehaviour:
   _MaskingImage: {fileID: 1262381171}
   maxSize: 1024
   _profileWidth: 250
+--- !u!114 &1471970053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471970047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1471970049}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1197744950}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1473198014
 GameObject:
   m_ObjectHideFlags: 0
@@ -97718,10 +98362,10 @@ RectTransform:
   - {fileID: 585648255}
   m_Father: {fileID: 203279074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 442.57144, y: -770.5}
-  m_SizeDelta: {x: 759.1429, y: 113}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 113}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1499251328
 MonoBehaviour:
@@ -98168,6 +98812,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506482790}
   m_CullTransparentMesh: 1
+--- !u!1 &1506932329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506932332}
+  - component: {fileID: 1506932331}
+  - component: {fileID: 1506932330}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1506932330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506932329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1506932331
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506932329}
+  m_CullTransparentMesh: 1
+--- !u!224 &1506932332
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506932329}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 616311991}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1509609717
 GameObject:
   m_ObjectHideFlags: 0
@@ -100193,19 +100912,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1539522902}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1248468548}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1539522902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104784,7 +105491,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 304, y: -35}
-  m_SizeDelta: {x: 45, y: 47.27848}
+  m_SizeDelta: {x: 45, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1611891896
 MonoBehaviour:
@@ -104814,7 +105521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -108271,8 +108978,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1110309445}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.28180575}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -113992,7 +114699,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 42, y: 0}
-  m_SizeDelta: {x: 55, y: 55}
+  m_SizeDelta: {x: 55, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1763525197
 MonoBehaviour:
@@ -117467,7 +118174,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0643957829
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dfa89e63b5220c94b9d1c05861282147, type: 2}
   m_sharedMaterial: {fileID: 8573671968333822760, guid: dfa89e63b5220c94b9d1c05861282147, type: 2}
@@ -117930,8 +118637,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 70c1c39c77fa41f4482e7f6be2e88d22, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 1a91cfd5de594dc45af7ab66fe657850, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -122451,7 +123158,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 20 SEP 1994
+  m_text: dd/mm/yyyy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dfa89e63b5220c94b9d1c05861282147, type: 2}
   m_sharedMaterial: {fileID: 8573671968333822760, guid: dfa89e63b5220c94b9d1c05861282147, type: 2}
@@ -124377,6 +125084,130 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918604242}
   m_CullTransparentMesh: 1
+--- !u!1 &1918624792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1918624793}
+  - component: {fileID: 1918624796}
+  - component: {fileID: 1918624795}
+  - component: {fileID: 1918624794}
+  - component: {fileID: 1918624797}
+  m_Layer: 5
+  m_Name: Dial Code Scroll View
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1918624793
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918624792}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 114103358}
+  - {fileID: 1949309582}
+  m_Father: {fileID: 1197744951}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: -110}
+  m_SizeDelta: {x: 400, y: 300}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1918624794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918624792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 2127112662}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 1
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 114103358}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 1949309583}
+  m_HorizontalScrollbarVisibility: 2
+  m_VerticalScrollbarVisibility: 2
+  m_HorizontalScrollbarSpacing: -3
+  m_VerticalScrollbarSpacing: -3
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1918624795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918624792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.9764706, b: 0.9254902, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: d932c376d1c47bd46acb782ac4161de6, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1918624796
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918624792}
+  m_CullTransparentMesh: 1
+--- !u!114 &1918624797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918624792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.62352943, g: 0.6784314, b: 0.62352943, a: 0.69803923}
+  m_EffectDistance: {x: 3, y: -3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1920210618
 GameObject:
   m_ObjectHideFlags: 0
@@ -126756,7 +127587,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0.000030517578, y: -19.8}
-  m_SizeDelta: {x: 40, y: 40}
+  m_SizeDelta: {x: 40, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1942241419
 MonoBehaviour:
@@ -126786,7 +127617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -126914,6 +127745,132 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945490964}
+  m_CullTransparentMesh: 1
+--- !u!1 &1949309581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1949309582}
+  - component: {fileID: 1949309585}
+  - component: {fileID: 1949309584}
+  - component: {fileID: 1949309583}
+  m_Layer: 5
+  m_Name: Scrollbar Vertical
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1949309582
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949309581}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 592069228}
+  m_Father: {fileID: 1918624793}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: -17}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &1949309583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949309581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1969321022}
+  m_HandleRect: {fileID: 1969321021}
+  m_Direction: 2
+  m_Value: 0
+  m_Size: 1
+  m_NumberOfSteps: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1949309584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949309581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1949309585
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949309581}
   m_CullTransparentMesh: 1
 --- !u!1 &1952165186
 GameObject:
@@ -127220,10 +128177,10 @@ RectTransform:
   - {fileID: 840114933}
   m_Father: {fileID: 203279074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 442.57144, y: -547.5}
-  m_SizeDelta: {x: 759.1429, y: 113}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 113}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1957577089
 MonoBehaviour:
@@ -127731,7 +128688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -127844,6 +128801,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965883608}
+  m_CullTransparentMesh: 1
+--- !u!1 &1969321020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1969321021}
+  - component: {fileID: 1969321023}
+  - component: {fileID: 1969321022}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1969321021
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969321020}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 592069228}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1969321022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969321020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1969321023
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969321020}
   m_CullTransparentMesh: 1
 --- !u!1 &1969682903
 GameObject:
@@ -128275,7 +129307,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 218, y: 69.200195}
-  m_SizeDelta: {x: 370, y: 283.46188}
+  m_SizeDelta: {x: 370, y: 0}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1974584561
 MonoBehaviour:
@@ -130854,10 +131886,10 @@ RectTransform:
   - {fileID: 284018357}
   m_Father: {fileID: 203279074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 822.1429, y: -1493}
-  m_SizeDelta: {x: 759.1429, y: 40}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 40}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &2012995516
 MonoBehaviour:
@@ -130976,7 +132008,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -10, y: -120}
-  m_SizeDelta: {x: 650, y: 50}
+  m_SizeDelta: {x: 750, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &2014058023
 MonoBehaviour:
@@ -130998,7 +132030,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: password must have Uppercase, Lowercase, Digit, Special characters
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d9bafe603028b141a6fe8f8c5e1f02f, type: 2}
   m_sharedMaterial: {fileID: -8712213404719183052, guid: 2d9bafe603028b141a6fe8f8c5e1f02f, type: 2}
@@ -131025,8 +132057,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31
-  m_fontSizeBase: 31
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -138764,6 +139796,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126181368}
   m_CullTransparentMesh: 1
+--- !u!1 &2127112661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2127112662}
+  - component: {fileID: 2127112664}
+  - component: {fileID: 2127112663}
+  m_Layer: 5
+  m_Name: Content
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2127112662
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127112661}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 182038130}
+  - {fileID: 460984229}
+  m_Father: {fileID: 114103358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -393, y: 0}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &2127112663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127112661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 1
+  m_Spacing: 15.09
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &2127112664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127112661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 2
 --- !u!1 &2127142659
 GameObject:
   m_ObjectHideFlags: 0
@@ -139026,7 +140137,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: 30, y: 22.173914}
+  m_SizeDelta: {x: 30, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &2129060936
 MonoBehaviour:
@@ -139056,7 +140167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -139379,6 +140490,1456 @@ MonoBehaviour:
         passport: []
         google_id: 
         apple_id: 
+  countries:
+  - name: Andorra
+    code: AD
+    emoji: "\U0001F1E6\U0001F1E9"
+    unicode: U+1F1E6 U+1F1E9
+    image: AD.svg
+    dial_code: +376
+  - name: United Arab Emirates
+    code: AE
+    emoji: "\U0001F1E6\U0001F1EA"
+    unicode: U+1F1E6 U+1F1EA
+    image: AE.svg
+    dial_code: +971
+  - name: Afghanistan
+    code: AF
+    emoji: "\U0001F1E6\U0001F1EB"
+    unicode: U+1F1E6 U+1F1EB
+    image: AF.svg
+    dial_code: +93
+  - name: Antigua & Barbuda
+    code: AG
+    emoji: "\U0001F1E6\U0001F1EC"
+    unicode: U+1F1E6 U+1F1EC
+    image: AG.svg
+    dial_code: +1268
+  - name: Anguilla
+    code: AI
+    emoji: "\U0001F1E6\U0001F1EE"
+    unicode: U+1F1E6 U+1F1EE
+    image: AI.svg
+    dial_code: +1264
+  - name: Albania
+    code: AL
+    emoji: "\U0001F1E6\U0001F1F1"
+    unicode: U+1F1E6 U+1F1F1
+    image: AL.svg
+    dial_code: +355
+  - name: Armenia
+    code: AM
+    emoji: "\U0001F1E6\U0001F1F2"
+    unicode: U+1F1E6 U+1F1F2
+    image: AM.svg
+    dial_code: +374
+  - name: Angola
+    code: AO
+    emoji: "\U0001F1E6\U0001F1F4"
+    unicode: U+1F1E6 U+1F1F4
+    image: AO.svg
+    dial_code: +244
+  - name: Antarctica
+    code: AQ
+    emoji: "\U0001F1E6\U0001F1F6"
+    unicode: U+1F1E6 U+1F1F6
+    image: AQ.svg
+    dial_code: +672
+  - name: Argentina
+    code: AR
+    emoji: "\U0001F1E6\U0001F1F7"
+    unicode: U+1F1E6 U+1F1F7
+    image: AR.svg
+    dial_code: +54
+  - name: American Samoa
+    code: AS
+    emoji: "\U0001F1E6\U0001F1F8"
+    unicode: U+1F1E6 U+1F1F8
+    image: AS.svg
+    dial_code: +1684
+  - name: Austria
+    code: AT
+    emoji: "\U0001F1E6\U0001F1F9"
+    unicode: U+1F1E6 U+1F1F9
+    image: AT.svg
+    dial_code: +43
+  - name: Australia
+    code: AU
+    emoji: "\U0001F1E6\U0001F1FA"
+    unicode: U+1F1E6 U+1F1FA
+    image: AU.svg
+    dial_code: +61
+  - name: Aruba
+    code: AW
+    emoji: "\U0001F1E6\U0001F1FC"
+    unicode: U+1F1E6 U+1F1FC
+    image: AW.svg
+    dial_code: +297
+  - name: "\xC5land Islands"
+    code: AX
+    emoji: "\U0001F1E6\U0001F1FD"
+    unicode: U+1F1E6 U+1F1FD
+    image: AX.svg
+    dial_code: +358
+  - name: Azerbaijan
+    code: AZ
+    emoji: "\U0001F1E6\U0001F1FF"
+    unicode: U+1F1E6 U+1F1FF
+    image: AZ.svg
+    dial_code: +994
+  - name: Bosnia & Herzegovina
+    code: BA
+    emoji: "\U0001F1E7\U0001F1E6"
+    unicode: U+1F1E7 U+1F1E6
+    image: BA.svg
+    dial_code: +387
+  - name: Barbados
+    code: BB
+    emoji: "\U0001F1E7\U0001F1E7"
+    unicode: U+1F1E7 U+1F1E7
+    image: BB.svg
+    dial_code: +1246
+  - name: Bangladesh
+    code: BD
+    emoji: "\U0001F1E7\U0001F1E9"
+    unicode: U+1F1E7 U+1F1E9
+    image: BD.svg
+    dial_code: +880
+  - name: Belgium
+    code: BE
+    emoji: "\U0001F1E7\U0001F1EA"
+    unicode: U+1F1E7 U+1F1EA
+    image: BE.svg
+    dial_code: +32
+  - name: Burkina Faso
+    code: BF
+    emoji: "\U0001F1E7\U0001F1EB"
+    unicode: U+1F1E7 U+1F1EB
+    image: BF.svg
+    dial_code: +226
+  - name: Bulgaria
+    code: BG
+    emoji: "\U0001F1E7\U0001F1EC"
+    unicode: U+1F1E7 U+1F1EC
+    image: BG.svg
+    dial_code: +359
+  - name: Bahrain
+    code: BH
+    emoji: "\U0001F1E7\U0001F1ED"
+    unicode: U+1F1E7 U+1F1ED
+    image: BH.svg
+    dial_code: +973
+  - name: Burundi
+    code: BI
+    emoji: "\U0001F1E7\U0001F1EE"
+    unicode: U+1F1E7 U+1F1EE
+    image: BI.svg
+    dial_code: +257
+  - name: Benin
+    code: BJ
+    emoji: "\U0001F1E7\U0001F1EF"
+    unicode: U+1F1E7 U+1F1EF
+    image: BJ.svg
+    dial_code: +229
+  - name: "St. Barth\xE9lemy"
+    code: BL
+    emoji: "\U0001F1E7\U0001F1F1"
+    unicode: U+1F1E7 U+1F1F1
+    image: BL.svg
+    dial_code: +590
+  - name: Bermuda
+    code: BM
+    emoji: "\U0001F1E7\U0001F1F2"
+    unicode: U+1F1E7 U+1F1F2
+    image: BM.svg
+    dial_code: +1441
+  - name: Brunei
+    code: BN
+    emoji: "\U0001F1E7\U0001F1F3"
+    unicode: U+1F1E7 U+1F1F3
+    image: BN.svg
+    dial_code: +673
+  - name: Bolivia
+    code: BO
+    emoji: "\U0001F1E7\U0001F1F4"
+    unicode: U+1F1E7 U+1F1F4
+    image: BO.svg
+    dial_code: +591
+  - name: Brazil
+    code: BR
+    emoji: "\U0001F1E7\U0001F1F7"
+    unicode: U+1F1E7 U+1F1F7
+    image: BR.svg
+    dial_code: +55
+  - name: Bahamas
+    code: BS
+    emoji: "\U0001F1E7\U0001F1F8"
+    unicode: U+1F1E7 U+1F1F8
+    image: BS.svg
+    dial_code: +1242
+  - name: Bhutan
+    code: BT
+    emoji: "\U0001F1E7\U0001F1F9"
+    unicode: U+1F1E7 U+1F1F9
+    image: BT.svg
+    dial_code: +975
+  - name: Botswana
+    code: BW
+    emoji: "\U0001F1E7\U0001F1FC"
+    unicode: U+1F1E7 U+1F1FC
+    image: BW.svg
+    dial_code: +267
+  - name: Belarus
+    code: BY
+    emoji: "\U0001F1E7\U0001F1FE"
+    unicode: U+1F1E7 U+1F1FE
+    image: BY.svg
+    dial_code: +375
+  - name: Belize
+    code: BZ
+    emoji: "\U0001F1E7\U0001F1FF"
+    unicode: U+1F1E7 U+1F1FF
+    image: BZ.svg
+    dial_code: +501
+  - name: Canada
+    code: CA
+    emoji: "\U0001F1E8\U0001F1E6"
+    unicode: U+1F1E8 U+1F1E6
+    image: CA.svg
+    dial_code: +1
+  - name: Cocos (Keeling) Islands
+    code: CC
+    emoji: "\U0001F1E8\U0001F1E8"
+    unicode: U+1F1E8 U+1F1E8
+    image: CC.svg
+    dial_code: +61
+  - name: Congo - Kinshasa
+    code: CD
+    emoji: "\U0001F1E8\U0001F1E9"
+    unicode: U+1F1E8 U+1F1E9
+    image: CD.svg
+    dial_code: +243
+  - name: Central African Republic
+    code: CF
+    emoji: "\U0001F1E8\U0001F1EB"
+    unicode: U+1F1E8 U+1F1EB
+    image: CF.svg
+    dial_code: +236
+  - name: Congo - Brazzaville
+    code: CG
+    emoji: "\U0001F1E8\U0001F1EC"
+    unicode: U+1F1E8 U+1F1EC
+    image: CG.svg
+    dial_code: +242
+  - name: Switzerland
+    code: CH
+    emoji: "\U0001F1E8\U0001F1ED"
+    unicode: U+1F1E8 U+1F1ED
+    image: CH.svg
+    dial_code: +41
+  - name: "C\xF4te d\u2019Ivoire"
+    code: CI
+    emoji: "\U0001F1E8\U0001F1EE"
+    unicode: U+1F1E8 U+1F1EE
+    image: CI.svg
+    dial_code: +225
+  - name: Cook Islands
+    code: CK
+    emoji: "\U0001F1E8\U0001F1F0"
+    unicode: U+1F1E8 U+1F1F0
+    image: CK.svg
+    dial_code: +682
+  - name: Chile
+    code: CL
+    emoji: "\U0001F1E8\U0001F1F1"
+    unicode: U+1F1E8 U+1F1F1
+    image: CL.svg
+    dial_code: +56
+  - name: Cameroon
+    code: CM
+    emoji: "\U0001F1E8\U0001F1F2"
+    unicode: U+1F1E8 U+1F1F2
+    image: CM.svg
+    dial_code: +237
+  - name: China
+    code: CN
+    emoji: "\U0001F1E8\U0001F1F3"
+    unicode: U+1F1E8 U+1F1F3
+    image: CN.svg
+    dial_code: +86
+  - name: Colombia
+    code: CO
+    emoji: "\U0001F1E8\U0001F1F4"
+    unicode: U+1F1E8 U+1F1F4
+    image: CO.svg
+    dial_code: +57
+  - name: Costa Rica
+    code: CR
+    emoji: "\U0001F1E8\U0001F1F7"
+    unicode: U+1F1E8 U+1F1F7
+    image: CR.svg
+    dial_code: +506
+  - name: Cuba
+    code: CU
+    emoji: "\U0001F1E8\U0001F1FA"
+    unicode: U+1F1E8 U+1F1FA
+    image: CU.svg
+    dial_code: +53
+  - name: Cape Verde
+    code: CV
+    emoji: "\U0001F1E8\U0001F1FB"
+    unicode: U+1F1E8 U+1F1FB
+    image: CV.svg
+    dial_code: +238
+  - name: Christmas Island
+    code: CX
+    emoji: "\U0001F1E8\U0001F1FD"
+    unicode: U+1F1E8 U+1F1FD
+    image: CX.svg
+    dial_code: +61
+  - name: Cyprus
+    code: CY
+    emoji: "\U0001F1E8\U0001F1FE"
+    unicode: U+1F1E8 U+1F1FE
+    image: CY.svg
+    dial_code: +357
+  - name: Czechia
+    code: CZ
+    emoji: "\U0001F1E8\U0001F1FF"
+    unicode: U+1F1E8 U+1F1FF
+    image: CZ.svg
+    dial_code: +420
+  - name: Germany
+    code: DE
+    emoji: "\U0001F1E9\U0001F1EA"
+    unicode: U+1F1E9 U+1F1EA
+    image: DE.svg
+    dial_code: +49
+  - name: Djibouti
+    code: DJ
+    emoji: "\U0001F1E9\U0001F1EF"
+    unicode: U+1F1E9 U+1F1EF
+    image: DJ.svg
+    dial_code: +253
+  - name: Denmark
+    code: DK
+    emoji: "\U0001F1E9\U0001F1F0"
+    unicode: U+1F1E9 U+1F1F0
+    image: DK.svg
+    dial_code: +45
+  - name: Dominica
+    code: DM
+    emoji: "\U0001F1E9\U0001F1F2"
+    unicode: U+1F1E9 U+1F1F2
+    image: DM.svg
+    dial_code: +1767
+  - name: Dominican Republic
+    code: DO
+    emoji: "\U0001F1E9\U0001F1F4"
+    unicode: U+1F1E9 U+1F1F4
+    image: DO.svg
+    dial_code: +1849
+  - name: Algeria
+    code: DZ
+    emoji: "\U0001F1E9\U0001F1FF"
+    unicode: U+1F1E9 U+1F1FF
+    image: DZ.svg
+    dial_code: +213
+  - name: Ecuador
+    code: EC
+    emoji: "\U0001F1EA\U0001F1E8"
+    unicode: U+1F1EA U+1F1E8
+    image: EC.svg
+    dial_code: +593
+  - name: Estonia
+    code: EE
+    emoji: "\U0001F1EA\U0001F1EA"
+    unicode: U+1F1EA U+1F1EA
+    image: EE.svg
+    dial_code: +372
+  - name: Egypt
+    code: EG
+    emoji: "\U0001F1EA\U0001F1EC"
+    unicode: U+1F1EA U+1F1EC
+    image: EG.svg
+    dial_code: +20
+  - name: Eritrea
+    code: ER
+    emoji: "\U0001F1EA\U0001F1F7"
+    unicode: U+1F1EA U+1F1F7
+    image: ER.svg
+    dial_code: +291
+  - name: Spain
+    code: ES
+    emoji: "\U0001F1EA\U0001F1F8"
+    unicode: U+1F1EA U+1F1F8
+    image: ES.svg
+    dial_code: +34
+  - name: Ethiopia
+    code: ET
+    emoji: "\U0001F1EA\U0001F1F9"
+    unicode: U+1F1EA U+1F1F9
+    image: ET.svg
+    dial_code: +251
+  - name: Finland
+    code: FI
+    emoji: "\U0001F1EB\U0001F1EE"
+    unicode: U+1F1EB U+1F1EE
+    image: FI.svg
+    dial_code: +358
+  - name: Fiji
+    code: FJ
+    emoji: "\U0001F1EB\U0001F1EF"
+    unicode: U+1F1EB U+1F1EF
+    image: FJ.svg
+    dial_code: +679
+  - name: Falkland Islands
+    code: FK
+    emoji: "\U0001F1EB\U0001F1F0"
+    unicode: U+1F1EB U+1F1F0
+    image: FK.svg
+    dial_code: +500
+  - name: Micronesia
+    code: FM
+    emoji: "\U0001F1EB\U0001F1F2"
+    unicode: U+1F1EB U+1F1F2
+    image: FM.svg
+    dial_code: +691
+  - name: Faroe Islands
+    code: FO
+    emoji: "\U0001F1EB\U0001F1F4"
+    unicode: U+1F1EB U+1F1F4
+    image: FO.svg
+    dial_code: +298
+  - name: France
+    code: FR
+    emoji: "\U0001F1EB\U0001F1F7"
+    unicode: U+1F1EB U+1F1F7
+    image: FR.svg
+    dial_code: +33
+  - name: Gabon
+    code: GA
+    emoji: "\U0001F1EC\U0001F1E6"
+    unicode: U+1F1EC U+1F1E6
+    image: GA.svg
+    dial_code: +241
+  - name: United Kingdom
+    code: GB
+    emoji: "\U0001F1EC\U0001F1E7"
+    unicode: U+1F1EC U+1F1E7
+    image: GB.svg
+    dial_code: +44
+  - name: Grenada
+    code: GD
+    emoji: "\U0001F1EC\U0001F1E9"
+    unicode: U+1F1EC U+1F1E9
+    image: GD.svg
+    dial_code: +1473
+  - name: Georgia
+    code: GE
+    emoji: "\U0001F1EC\U0001F1EA"
+    unicode: U+1F1EC U+1F1EA
+    image: GE.svg
+    dial_code: +995
+  - name: French Guiana
+    code: GF
+    emoji: "\U0001F1EC\U0001F1EB"
+    unicode: U+1F1EC U+1F1EB
+    image: GF.svg
+    dial_code: +594
+  - name: Guernsey
+    code: GG
+    emoji: "\U0001F1EC\U0001F1EC"
+    unicode: U+1F1EC U+1F1EC
+    image: GG.svg
+    dial_code: +44
+  - name: Ghana
+    code: GH
+    emoji: "\U0001F1EC\U0001F1ED"
+    unicode: U+1F1EC U+1F1ED
+    image: GH.svg
+    dial_code: +233
+  - name: Gibraltar
+    code: GI
+    emoji: "\U0001F1EC\U0001F1EE"
+    unicode: U+1F1EC U+1F1EE
+    image: GI.svg
+    dial_code: +350
+  - name: Greenland
+    code: GL
+    emoji: "\U0001F1EC\U0001F1F1"
+    unicode: U+1F1EC U+1F1F1
+    image: GL.svg
+    dial_code: +299
+  - name: Gambia
+    code: GM
+    emoji: "\U0001F1EC\U0001F1F2"
+    unicode: U+1F1EC U+1F1F2
+    image: GM.svg
+    dial_code: +220
+  - name: Guinea
+    code: GN
+    emoji: "\U0001F1EC\U0001F1F3"
+    unicode: U+1F1EC U+1F1F3
+    image: GN.svg
+    dial_code: +224
+  - name: Guadeloupe
+    code: GP
+    emoji: "\U0001F1EC\U0001F1F5"
+    unicode: U+1F1EC U+1F1F5
+    image: GP.svg
+    dial_code: +590
+  - name: Equatorial Guinea
+    code: GQ
+    emoji: "\U0001F1EC\U0001F1F6"
+    unicode: U+1F1EC U+1F1F6
+    image: GQ.svg
+    dial_code: +240
+  - name: Greece
+    code: GR
+    emoji: "\U0001F1EC\U0001F1F7"
+    unicode: U+1F1EC U+1F1F7
+    image: GR.svg
+    dial_code: +30
+  - name: South Georgia & South Sandwich Islands
+    code: GS
+    emoji: "\U0001F1EC\U0001F1F8"
+    unicode: U+1F1EC U+1F1F8
+    image: GS.svg
+    dial_code: +500
+  - name: Guatemala
+    code: GT
+    emoji: "\U0001F1EC\U0001F1F9"
+    unicode: U+1F1EC U+1F1F9
+    image: GT.svg
+    dial_code: +502
+  - name: Guam
+    code: GU
+    emoji: "\U0001F1EC\U0001F1FA"
+    unicode: U+1F1EC U+1F1FA
+    image: GU.svg
+    dial_code: +1671
+  - name: Guinea-Bissau
+    code: GW
+    emoji: "\U0001F1EC\U0001F1FC"
+    unicode: U+1F1EC U+1F1FC
+    image: GW.svg
+    dial_code: +245
+  - name: Guyana
+    code: GY
+    emoji: "\U0001F1EC\U0001F1FE"
+    unicode: U+1F1EC U+1F1FE
+    image: GY.svg
+    dial_code: +595
+  - name: Hong Kong SAR China
+    code: HK
+    emoji: "\U0001F1ED\U0001F1F0"
+    unicode: U+1F1ED U+1F1F0
+    image: HK.svg
+    dial_code: +852
+  - name: Honduras
+    code: HN
+    emoji: "\U0001F1ED\U0001F1F3"
+    unicode: U+1F1ED U+1F1F3
+    image: HN.svg
+    dial_code: +504
+  - name: Croatia
+    code: HR
+    emoji: "\U0001F1ED\U0001F1F7"
+    unicode: U+1F1ED U+1F1F7
+    image: HR.svg
+    dial_code: +385
+  - name: Haiti
+    code: HT
+    emoji: "\U0001F1ED\U0001F1F9"
+    unicode: U+1F1ED U+1F1F9
+    image: HT.svg
+    dial_code: +509
+  - name: Hungary
+    code: HU
+    emoji: "\U0001F1ED\U0001F1FA"
+    unicode: U+1F1ED U+1F1FA
+    image: HU.svg
+    dial_code: +36
+  - name: Indonesia
+    code: ID
+    emoji: "\U0001F1EE\U0001F1E9"
+    unicode: U+1F1EE U+1F1E9
+    image: ID.svg
+    dial_code: +62
+  - name: Ireland
+    code: IE
+    emoji: "\U0001F1EE\U0001F1EA"
+    unicode: U+1F1EE U+1F1EA
+    image: IE.svg
+    dial_code: +353
+  - name: Israel
+    code: IL
+    emoji: "\U0001F1EE\U0001F1F1"
+    unicode: U+1F1EE U+1F1F1
+    image: IL.svg
+    dial_code: +972
+  - name: Isle of Man
+    code: IM
+    emoji: "\U0001F1EE\U0001F1F2"
+    unicode: U+1F1EE U+1F1F2
+    image: IM.svg
+    dial_code: +44
+  - name: India
+    code: IN
+    emoji: "\U0001F1EE\U0001F1F3"
+    unicode: U+1F1EE U+1F1F3
+    image: IN.svg
+    dial_code: +91
+  - name: British Indian Ocean Territory
+    code: IO
+    emoji: "\U0001F1EE\U0001F1F4"
+    unicode: U+1F1EE U+1F1F4
+    image: IO.svg
+    dial_code: +246
+  - name: Iraq
+    code: IQ
+    emoji: "\U0001F1EE\U0001F1F6"
+    unicode: U+1F1EE U+1F1F6
+    image: IQ.svg
+    dial_code: +964
+  - name: Iran
+    code: IR
+    emoji: "\U0001F1EE\U0001F1F7"
+    unicode: U+1F1EE U+1F1F7
+    image: IR.svg
+    dial_code: +98
+  - name: Iceland
+    code: IS
+    emoji: "\U0001F1EE\U0001F1F8"
+    unicode: U+1F1EE U+1F1F8
+    image: IS.svg
+    dial_code: +354
+  - name: Italy
+    code: IT
+    emoji: "\U0001F1EE\U0001F1F9"
+    unicode: U+1F1EE U+1F1F9
+    image: IT.svg
+    dial_code: +39
+  - name: Jersey
+    code: JE
+    emoji: "\U0001F1EF\U0001F1EA"
+    unicode: U+1F1EF U+1F1EA
+    image: JE.svg
+    dial_code: +44
+  - name: Jamaica
+    code: JM
+    emoji: "\U0001F1EF\U0001F1F2"
+    unicode: U+1F1EF U+1F1F2
+    image: JM.svg
+    dial_code: +1876
+  - name: Jordan
+    code: JO
+    emoji: "\U0001F1EF\U0001F1F4"
+    unicode: U+1F1EF U+1F1F4
+    image: JO.svg
+    dial_code: +962
+  - name: Japan
+    code: JP
+    emoji: "\U0001F1EF\U0001F1F5"
+    unicode: U+1F1EF U+1F1F5
+    image: JP.svg
+    dial_code: +81
+  - name: Kenya
+    code: KE
+    emoji: "\U0001F1F0\U0001F1EA"
+    unicode: U+1F1F0 U+1F1EA
+    image: KE.svg
+    dial_code: +254
+  - name: Kyrgyzstan
+    code: KG
+    emoji: "\U0001F1F0\U0001F1EC"
+    unicode: U+1F1F0 U+1F1EC
+    image: KG.svg
+    dial_code: +996
+  - name: Cambodia
+    code: KH
+    emoji: "\U0001F1F0\U0001F1ED"
+    unicode: U+1F1F0 U+1F1ED
+    image: KH.svg
+    dial_code: +855
+  - name: Kiribati
+    code: KI
+    emoji: "\U0001F1F0\U0001F1EE"
+    unicode: U+1F1F0 U+1F1EE
+    image: KI.svg
+    dial_code: +686
+  - name: Comoros
+    code: KM
+    emoji: "\U0001F1F0\U0001F1F2"
+    unicode: U+1F1F0 U+1F1F2
+    image: KM.svg
+    dial_code: +269
+  - name: St. Kitts & Nevis
+    code: KN
+    emoji: "\U0001F1F0\U0001F1F3"
+    unicode: U+1F1F0 U+1F1F3
+    image: KN.svg
+    dial_code: +1869
+  - name: North Korea
+    code: KP
+    emoji: "\U0001F1F0\U0001F1F5"
+    unicode: U+1F1F0 U+1F1F5
+    image: KP.svg
+    dial_code: +850
+  - name: South Korea
+    code: KR
+    emoji: "\U0001F1F0\U0001F1F7"
+    unicode: U+1F1F0 U+1F1F7
+    image: KR.svg
+    dial_code: +82
+  - name: Kuwait
+    code: KW
+    emoji: "\U0001F1F0\U0001F1FC"
+    unicode: U+1F1F0 U+1F1FC
+    image: KW.svg
+    dial_code: +965
+  - name: Cayman Islands
+    code: KY
+    emoji: "\U0001F1F0\U0001F1FE"
+    unicode: U+1F1F0 U+1F1FE
+    image: KY.svg
+    dial_code: + 345
+  - name: Kazakhstan
+    code: KZ
+    emoji: "\U0001F1F0\U0001F1FF"
+    unicode: U+1F1F0 U+1F1FF
+    image: KZ.svg
+    dial_code: +77
+  - name: Laos
+    code: LA
+    emoji: "\U0001F1F1\U0001F1E6"
+    unicode: U+1F1F1 U+1F1E6
+    image: LA.svg
+    dial_code: +856
+  - name: Lebanon
+    code: LB
+    emoji: "\U0001F1F1\U0001F1E7"
+    unicode: U+1F1F1 U+1F1E7
+    image: LB.svg
+    dial_code: +961
+  - name: St. Lucia
+    code: LC
+    emoji: "\U0001F1F1\U0001F1E8"
+    unicode: U+1F1F1 U+1F1E8
+    image: LC.svg
+    dial_code: +1758
+  - name: Liechtenstein
+    code: LI
+    emoji: "\U0001F1F1\U0001F1EE"
+    unicode: U+1F1F1 U+1F1EE
+    image: LI.svg
+    dial_code: +423
+  - name: Sri Lanka
+    code: LK
+    emoji: "\U0001F1F1\U0001F1F0"
+    unicode: U+1F1F1 U+1F1F0
+    image: LK.svg
+    dial_code: +94
+  - name: Liberia
+    code: LR
+    emoji: "\U0001F1F1\U0001F1F7"
+    unicode: U+1F1F1 U+1F1F7
+    image: LR.svg
+    dial_code: +231
+  - name: Lesotho
+    code: LS
+    emoji: "\U0001F1F1\U0001F1F8"
+    unicode: U+1F1F1 U+1F1F8
+    image: LS.svg
+    dial_code: +266
+  - name: Lithuania
+    code: LT
+    emoji: "\U0001F1F1\U0001F1F9"
+    unicode: U+1F1F1 U+1F1F9
+    image: LT.svg
+    dial_code: +370
+  - name: Luxembourg
+    code: LU
+    emoji: "\U0001F1F1\U0001F1FA"
+    unicode: U+1F1F1 U+1F1FA
+    image: LU.svg
+    dial_code: +352
+  - name: Latvia
+    code: LV
+    emoji: "\U0001F1F1\U0001F1FB"
+    unicode: U+1F1F1 U+1F1FB
+    image: LV.svg
+    dial_code: +371
+  - name: Libya
+    code: LY
+    emoji: "\U0001F1F1\U0001F1FE"
+    unicode: U+1F1F1 U+1F1FE
+    image: LY.svg
+    dial_code: +218
+  - name: Morocco
+    code: MA
+    emoji: "\U0001F1F2\U0001F1E6"
+    unicode: U+1F1F2 U+1F1E6
+    image: MA.svg
+    dial_code: +212
+  - name: Monaco
+    code: MC
+    emoji: "\U0001F1F2\U0001F1E8"
+    unicode: U+1F1F2 U+1F1E8
+    image: MC.svg
+    dial_code: +377
+  - name: Moldova
+    code: MD
+    emoji: "\U0001F1F2\U0001F1E9"
+    unicode: U+1F1F2 U+1F1E9
+    image: MD.svg
+    dial_code: +373
+  - name: Montenegro
+    code: ME
+    emoji: "\U0001F1F2\U0001F1EA"
+    unicode: U+1F1F2 U+1F1EA
+    image: ME.svg
+    dial_code: +382
+  - name: St. Martin
+    code: MF
+    emoji: "\U0001F1F2\U0001F1EB"
+    unicode: U+1F1F2 U+1F1EB
+    image: MF.svg
+    dial_code: +590
+  - name: Madagascar
+    code: MG
+    emoji: "\U0001F1F2\U0001F1EC"
+    unicode: U+1F1F2 U+1F1EC
+    image: MG.svg
+    dial_code: +261
+  - name: Marshall Islands
+    code: MH
+    emoji: "\U0001F1F2\U0001F1ED"
+    unicode: U+1F1F2 U+1F1ED
+    image: MH.svg
+    dial_code: +692
+  - name: North Macedonia
+    code: MK
+    emoji: "\U0001F1F2\U0001F1F0"
+    unicode: U+1F1F2 U+1F1F0
+    image: MK.svg
+    dial_code: +389
+  - name: Mali
+    code: ML
+    emoji: "\U0001F1F2\U0001F1F1"
+    unicode: U+1F1F2 U+1F1F1
+    image: ML.svg
+    dial_code: +223
+  - name: Myanmar (Burma)
+    code: MM
+    emoji: "\U0001F1F2\U0001F1F2"
+    unicode: U+1F1F2 U+1F1F2
+    image: MM.svg
+    dial_code: +95
+  - name: Mongolia
+    code: MN
+    emoji: "\U0001F1F2\U0001F1F3"
+    unicode: U+1F1F2 U+1F1F3
+    image: MN.svg
+    dial_code: +976
+  - name: Macao SAR China
+    code: MO
+    emoji: "\U0001F1F2\U0001F1F4"
+    unicode: U+1F1F2 U+1F1F4
+    image: MO.svg
+    dial_code: +853
+  - name: Northern Mariana Islands
+    code: MP
+    emoji: "\U0001F1F2\U0001F1F5"
+    unicode: U+1F1F2 U+1F1F5
+    image: MP.svg
+    dial_code: +1670
+  - name: Martinique
+    code: MQ
+    emoji: "\U0001F1F2\U0001F1F6"
+    unicode: U+1F1F2 U+1F1F6
+    image: MQ.svg
+    dial_code: +596
+  - name: Mauritania
+    code: MR
+    emoji: "\U0001F1F2\U0001F1F7"
+    unicode: U+1F1F2 U+1F1F7
+    image: MR.svg
+    dial_code: +222
+  - name: Montserrat
+    code: MS
+    emoji: "\U0001F1F2\U0001F1F8"
+    unicode: U+1F1F2 U+1F1F8
+    image: MS.svg
+    dial_code: +1664
+  - name: Malta
+    code: MT
+    emoji: "\U0001F1F2\U0001F1F9"
+    unicode: U+1F1F2 U+1F1F9
+    image: MT.svg
+    dial_code: +356
+  - name: Mauritius
+    code: MU
+    emoji: "\U0001F1F2\U0001F1FA"
+    unicode: U+1F1F2 U+1F1FA
+    image: MU.svg
+    dial_code: +230
+  - name: Maldives
+    code: MV
+    emoji: "\U0001F1F2\U0001F1FB"
+    unicode: U+1F1F2 U+1F1FB
+    image: MV.svg
+    dial_code: +960
+  - name: Malawi
+    code: MW
+    emoji: "\U0001F1F2\U0001F1FC"
+    unicode: U+1F1F2 U+1F1FC
+    image: MW.svg
+    dial_code: +265
+  - name: Mexico
+    code: MX
+    emoji: "\U0001F1F2\U0001F1FD"
+    unicode: U+1F1F2 U+1F1FD
+    image: MX.svg
+    dial_code: +52
+  - name: Malaysia
+    code: MY
+    emoji: "\U0001F1F2\U0001F1FE"
+    unicode: U+1F1F2 U+1F1FE
+    image: MY.svg
+    dial_code: +60
+  - name: Mozambique
+    code: MZ
+    emoji: "\U0001F1F2\U0001F1FF"
+    unicode: U+1F1F2 U+1F1FF
+    image: MZ.svg
+    dial_code: +258
+  - name: Namibia
+    code: NA
+    emoji: "\U0001F1F3\U0001F1E6"
+    unicode: U+1F1F3 U+1F1E6
+    image: NA.svg
+    dial_code: +264
+  - name: New Caledonia
+    code: NC
+    emoji: "\U0001F1F3\U0001F1E8"
+    unicode: U+1F1F3 U+1F1E8
+    image: NC.svg
+    dial_code: +687
+  - name: Niger
+    code: NE
+    emoji: "\U0001F1F3\U0001F1EA"
+    unicode: U+1F1F3 U+1F1EA
+    image: NE.svg
+    dial_code: +227
+  - name: Norfolk Island
+    code: NF
+    emoji: "\U0001F1F3\U0001F1EB"
+    unicode: U+1F1F3 U+1F1EB
+    image: NF.svg
+    dial_code: +672
+  - name: Nigeria
+    code: NG
+    emoji: "\U0001F1F3\U0001F1EC"
+    unicode: U+1F1F3 U+1F1EC
+    image: NG.svg
+    dial_code: +234
+  - name: Nicaragua
+    code: NI
+    emoji: "\U0001F1F3\U0001F1EE"
+    unicode: U+1F1F3 U+1F1EE
+    image: NI.svg
+    dial_code: +505
+  - name: Netherlands
+    code: NL
+    emoji: "\U0001F1F3\U0001F1F1"
+    unicode: U+1F1F3 U+1F1F1
+    image: NL.svg
+    dial_code: +31
+  - name: Norway
+    code: NO
+    emoji: "\U0001F1F3\U0001F1F4"
+    unicode: U+1F1F3 U+1F1F4
+    image: NO.svg
+    dial_code: +47
+  - name: Nepal
+    code: NP
+    emoji: "\U0001F1F3\U0001F1F5"
+    unicode: U+1F1F3 U+1F1F5
+    image: NP.svg
+    dial_code: +977
+  - name: Nauru
+    code: NR
+    emoji: "\U0001F1F3\U0001F1F7"
+    unicode: U+1F1F3 U+1F1F7
+    image: NR.svg
+    dial_code: +674
+  - name: Niue
+    code: NU
+    emoji: "\U0001F1F3\U0001F1FA"
+    unicode: U+1F1F3 U+1F1FA
+    image: NU.svg
+    dial_code: +683
+  - name: New Zealand
+    code: NZ
+    emoji: "\U0001F1F3\U0001F1FF"
+    unicode: U+1F1F3 U+1F1FF
+    image: NZ.svg
+    dial_code: +64
+  - name: Oman
+    code: OM
+    emoji: "\U0001F1F4\U0001F1F2"
+    unicode: U+1F1F4 U+1F1F2
+    image: OM.svg
+    dial_code: +968
+  - name: Panama
+    code: PA
+    emoji: "\U0001F1F5\U0001F1E6"
+    unicode: U+1F1F5 U+1F1E6
+    image: PA.svg
+    dial_code: +507
+  - name: Peru
+    code: PE
+    emoji: "\U0001F1F5\U0001F1EA"
+    unicode: U+1F1F5 U+1F1EA
+    image: PE.svg
+    dial_code: +51
+  - name: French Polynesia
+    code: PF
+    emoji: "\U0001F1F5\U0001F1EB"
+    unicode: U+1F1F5 U+1F1EB
+    image: PF.svg
+    dial_code: +689
+  - name: Papua New Guinea
+    code: PG
+    emoji: "\U0001F1F5\U0001F1EC"
+    unicode: U+1F1F5 U+1F1EC
+    image: PG.svg
+    dial_code: +675
+  - name: Philippines
+    code: PH
+    emoji: "\U0001F1F5\U0001F1ED"
+    unicode: U+1F1F5 U+1F1ED
+    image: PH.svg
+    dial_code: +63
+  - name: Pakistan
+    code: PK
+    emoji: "\U0001F1F5\U0001F1F0"
+    unicode: U+1F1F5 U+1F1F0
+    image: PK.svg
+    dial_code: +92
+  - name: Poland
+    code: PL
+    emoji: "\U0001F1F5\U0001F1F1"
+    unicode: U+1F1F5 U+1F1F1
+    image: PL.svg
+    dial_code: +48
+  - name: St. Pierre & Miquelon
+    code: PM
+    emoji: "\U0001F1F5\U0001F1F2"
+    unicode: U+1F1F5 U+1F1F2
+    image: PM.svg
+    dial_code: +508
+  - name: Pitcairn Islands
+    code: PN
+    emoji: "\U0001F1F5\U0001F1F3"
+    unicode: U+1F1F5 U+1F1F3
+    image: PN.svg
+    dial_code: +872
+  - name: Puerto Rico
+    code: PR
+    emoji: "\U0001F1F5\U0001F1F7"
+    unicode: U+1F1F5 U+1F1F7
+    image: PR.svg
+    dial_code: +1939
+  - name: Palestinian Territories
+    code: PS
+    emoji: "\U0001F1F5\U0001F1F8"
+    unicode: U+1F1F5 U+1F1F8
+    image: PS.svg
+    dial_code: +970
+  - name: Portugal
+    code: PT
+    emoji: "\U0001F1F5\U0001F1F9"
+    unicode: U+1F1F5 U+1F1F9
+    image: PT.svg
+    dial_code: +351
+  - name: Palau
+    code: PW
+    emoji: "\U0001F1F5\U0001F1FC"
+    unicode: U+1F1F5 U+1F1FC
+    image: PW.svg
+    dial_code: +680
+  - name: Paraguay
+    code: PY
+    emoji: "\U0001F1F5\U0001F1FE"
+    unicode: U+1F1F5 U+1F1FE
+    image: PY.svg
+    dial_code: +595
+  - name: Qatar
+    code: QA
+    emoji: "\U0001F1F6\U0001F1E6"
+    unicode: U+1F1F6 U+1F1E6
+    image: QA.svg
+    dial_code: +974
+  - name: "R\xE9union"
+    code: RE
+    emoji: "\U0001F1F7\U0001F1EA"
+    unicode: U+1F1F7 U+1F1EA
+    image: RE.svg
+    dial_code: +262
+  - name: Romania
+    code: RO
+    emoji: "\U0001F1F7\U0001F1F4"
+    unicode: U+1F1F7 U+1F1F4
+    image: RO.svg
+    dial_code: +40
+  - name: Serbia
+    code: RS
+    emoji: "\U0001F1F7\U0001F1F8"
+    unicode: U+1F1F7 U+1F1F8
+    image: RS.svg
+    dial_code: +381
+  - name: Russia
+    code: RU
+    emoji: "\U0001F1F7\U0001F1FA"
+    unicode: U+1F1F7 U+1F1FA
+    image: RU.svg
+    dial_code: +7
+  - name: Rwanda
+    code: RW
+    emoji: "\U0001F1F7\U0001F1FC"
+    unicode: U+1F1F7 U+1F1FC
+    image: RW.svg
+    dial_code: +250
+  - name: Saudi Arabia
+    code: SA
+    emoji: "\U0001F1F8\U0001F1E6"
+    unicode: U+1F1F8 U+1F1E6
+    image: SA.svg
+    dial_code: +966
+  - name: Solomon Islands
+    code: SB
+    emoji: "\U0001F1F8\U0001F1E7"
+    unicode: U+1F1F8 U+1F1E7
+    image: SB.svg
+    dial_code: +677
+  - name: Seychelles
+    code: SC
+    emoji: "\U0001F1F8\U0001F1E8"
+    unicode: U+1F1F8 U+1F1E8
+    image: SC.svg
+    dial_code: +248
+  - name: Sudan
+    code: SD
+    emoji: "\U0001F1F8\U0001F1E9"
+    unicode: U+1F1F8 U+1F1E9
+    image: SD.svg
+    dial_code: +249
+  - name: Sweden
+    code: SE
+    emoji: "\U0001F1F8\U0001F1EA"
+    unicode: U+1F1F8 U+1F1EA
+    image: SE.svg
+    dial_code: +46
+  - name: Singapore
+    code: SG
+    emoji: "\U0001F1F8\U0001F1EC"
+    unicode: U+1F1F8 U+1F1EC
+    image: SG.svg
+    dial_code: +65
+  - name: St. Helena
+    code: SH
+    emoji: "\U0001F1F8\U0001F1ED"
+    unicode: U+1F1F8 U+1F1ED
+    image: SH.svg
+    dial_code: +290
+  - name: Slovenia
+    code: SI
+    emoji: "\U0001F1F8\U0001F1EE"
+    unicode: U+1F1F8 U+1F1EE
+    image: SI.svg
+    dial_code: +386
+  - name: Svalbard & Jan Mayen
+    code: SJ
+    emoji: "\U0001F1F8\U0001F1EF"
+    unicode: U+1F1F8 U+1F1EF
+    image: SJ.svg
+    dial_code: +47
+  - name: Slovakia
+    code: SK
+    emoji: "\U0001F1F8\U0001F1F0"
+    unicode: U+1F1F8 U+1F1F0
+    image: SK.svg
+    dial_code: +421
+  - name: Sierra Leone
+    code: SL
+    emoji: "\U0001F1F8\U0001F1F1"
+    unicode: U+1F1F8 U+1F1F1
+    image: SL.svg
+    dial_code: +232
+  - name: San Marino
+    code: SM
+    emoji: "\U0001F1F8\U0001F1F2"
+    unicode: U+1F1F8 U+1F1F2
+    image: SM.svg
+    dial_code: +378
+  - name: Senegal
+    code: SN
+    emoji: "\U0001F1F8\U0001F1F3"
+    unicode: U+1F1F8 U+1F1F3
+    image: SN.svg
+    dial_code: +221
+  - name: Somalia
+    code: SO
+    emoji: "\U0001F1F8\U0001F1F4"
+    unicode: U+1F1F8 U+1F1F4
+    image: SO.svg
+    dial_code: +252
+  - name: Suriname
+    code: SR
+    emoji: "\U0001F1F8\U0001F1F7"
+    unicode: U+1F1F8 U+1F1F7
+    image: SR.svg
+    dial_code: +597
+  - name: South Sudan
+    code: SS
+    emoji: "\U0001F1F8\U0001F1F8"
+    unicode: U+1F1F8 U+1F1F8
+    image: SS.svg
+    dial_code: +211
+  - name: "S\xE3o Tom\xE9 & Pr\xEDncipe"
+    code: ST
+    emoji: "\U0001F1F8\U0001F1F9"
+    unicode: U+1F1F8 U+1F1F9
+    image: ST.svg
+    dial_code: +239
+  - name: El Salvador
+    code: SV
+    emoji: "\U0001F1F8\U0001F1FB"
+    unicode: U+1F1F8 U+1F1FB
+    image: SV.svg
+    dial_code: +503
+  - name: Syria
+    code: SY
+    emoji: "\U0001F1F8\U0001F1FE"
+    unicode: U+1F1F8 U+1F1FE
+    image: SY.svg
+    dial_code: +963
+  - name: Eswatini
+    code: SZ
+    emoji: "\U0001F1F8\U0001F1FF"
+    unicode: U+1F1F8 U+1F1FF
+    image: SZ.svg
+    dial_code: +268
+  - name: Turks & Caicos Islands
+    code: TC
+    emoji: "\U0001F1F9\U0001F1E8"
+    unicode: U+1F1F9 U+1F1E8
+    image: TC.svg
+    dial_code: +1649
+  - name: Chad
+    code: TD
+    emoji: "\U0001F1F9\U0001F1E9"
+    unicode: U+1F1F9 U+1F1E9
+    image: TD.svg
+    dial_code: +235
+  - name: Togo
+    code: TG
+    emoji: "\U0001F1F9\U0001F1EC"
+    unicode: U+1F1F9 U+1F1EC
+    image: TG.svg
+    dial_code: +228
+  - name: Thailand
+    code: TH
+    emoji: "\U0001F1F9\U0001F1ED"
+    unicode: U+1F1F9 U+1F1ED
+    image: TH.svg
+    dial_code: +66
+  - name: Tajikistan
+    code: TJ
+    emoji: "\U0001F1F9\U0001F1EF"
+    unicode: U+1F1F9 U+1F1EF
+    image: TJ.svg
+    dial_code: +992
+  - name: Tokelau
+    code: TK
+    emoji: "\U0001F1F9\U0001F1F0"
+    unicode: U+1F1F9 U+1F1F0
+    image: TK.svg
+    dial_code: +690
+  - name: Timor-Leste
+    code: TL
+    emoji: "\U0001F1F9\U0001F1F1"
+    unicode: U+1F1F9 U+1F1F1
+    image: TL.svg
+    dial_code: +670
+  - name: Turkmenistan
+    code: TM
+    emoji: "\U0001F1F9\U0001F1F2"
+    unicode: U+1F1F9 U+1F1F2
+    image: TM.svg
+    dial_code: +993
+  - name: Tunisia
+    code: TN
+    emoji: "\U0001F1F9\U0001F1F3"
+    unicode: U+1F1F9 U+1F1F3
+    image: TN.svg
+    dial_code: +216
+  - name: Tonga
+    code: TO
+    emoji: "\U0001F1F9\U0001F1F4"
+    unicode: U+1F1F9 U+1F1F4
+    image: TO.svg
+    dial_code: +676
+  - name: Turkey
+    code: TR
+    emoji: "\U0001F1F9\U0001F1F7"
+    unicode: U+1F1F9 U+1F1F7
+    image: TR.svg
+    dial_code: +90
+  - name: Trinidad & Tobago
+    code: TT
+    emoji: "\U0001F1F9\U0001F1F9"
+    unicode: U+1F1F9 U+1F1F9
+    image: TT.svg
+    dial_code: +1868
+  - name: Tuvalu
+    code: TV
+    emoji: "\U0001F1F9\U0001F1FB"
+    unicode: U+1F1F9 U+1F1FB
+    image: TV.svg
+    dial_code: +688
+  - name: Taiwan
+    code: TW
+    emoji: "\U0001F1F9\U0001F1FC"
+    unicode: U+1F1F9 U+1F1FC
+    image: TW.svg
+    dial_code: +886
+  - name: Tanzania
+    code: TZ
+    emoji: "\U0001F1F9\U0001F1FF"
+    unicode: U+1F1F9 U+1F1FF
+    image: TZ.svg
+    dial_code: +255
+  - name: Ukraine
+    code: UA
+    emoji: "\U0001F1FA\U0001F1E6"
+    unicode: U+1F1FA U+1F1E6
+    image: UA.svg
+    dial_code: +380
+  - name: Uganda
+    code: UG
+    emoji: "\U0001F1FA\U0001F1EC"
+    unicode: U+1F1FA U+1F1EC
+    image: UG.svg
+    dial_code: +256
+  - name: United States
+    code: US
+    emoji: "\U0001F1FA\U0001F1F8"
+    unicode: U+1F1FA U+1F1F8
+    image: US.svg
+    dial_code: +1
+  - name: Uruguay
+    code: UY
+    emoji: "\U0001F1FA\U0001F1FE"
+    unicode: U+1F1FA U+1F1FE
+    image: UY.svg
+    dial_code: +598
+  - name: Uzbekistan
+    code: UZ
+    emoji: "\U0001F1FA\U0001F1FF"
+    unicode: U+1F1FA U+1F1FF
+    image: UZ.svg
+    dial_code: +998
+  - name: Vatican City
+    code: VA
+    emoji: "\U0001F1FB\U0001F1E6"
+    unicode: U+1F1FB U+1F1E6
+    image: VA.svg
+    dial_code: +379
+  - name: St. Vincent & Grenadines
+    code: VC
+    emoji: "\U0001F1FB\U0001F1E8"
+    unicode: U+1F1FB U+1F1E8
+    image: VC.svg
+    dial_code: +1784
+  - name: Venezuela
+    code: VE
+    emoji: "\U0001F1FB\U0001F1EA"
+    unicode: U+1F1FB U+1F1EA
+    image: VE.svg
+    dial_code: +58
+  - name: British Virgin Islands
+    code: VG
+    emoji: "\U0001F1FB\U0001F1EC"
+    unicode: U+1F1FB U+1F1EC
+    image: VG.svg
+    dial_code: +1284
+  - name: U.S. Virgin Islands
+    code: VI
+    emoji: "\U0001F1FB\U0001F1EE"
+    unicode: U+1F1FB U+1F1EE
+    image: VI.svg
+    dial_code: +1340
+  - name: Vietnam
+    code: VN
+    emoji: "\U0001F1FB\U0001F1F3"
+    unicode: U+1F1FB U+1F1F3
+    image: VN.svg
+    dial_code: +84
+  - name: Vanuatu
+    code: VU
+    emoji: "\U0001F1FB\U0001F1FA"
+    unicode: U+1F1FB U+1F1FA
+    image: VU.svg
+    dial_code: +678
+  - name: Wallis & Futuna
+    code: WF
+    emoji: "\U0001F1FC\U0001F1EB"
+    unicode: U+1F1FC U+1F1EB
+    image: WF.svg
+    dial_code: +681
+  - name: Samoa
+    code: WS
+    emoji: "\U0001F1FC\U0001F1F8"
+    unicode: U+1F1FC U+1F1F8
+    image: WS.svg
+    dial_code: +685
+  - name: Yemen
+    code: YE
+    emoji: "\U0001F1FE\U0001F1EA"
+    unicode: U+1F1FE U+1F1EA
+    image: YE.svg
+    dial_code: +967
+  - name: Mayotte
+    code: YT
+    emoji: "\U0001F1FE\U0001F1F9"
+    unicode: U+1F1FE U+1F1F9
+    image: YT.svg
+    dial_code: +262
+  - name: South Africa
+    code: ZA
+    emoji: "\U0001F1FF\U0001F1E6"
+    unicode: U+1F1FF U+1F1E6
+    image: ZA.svg
+    dial_code: +27
+  - name: Zambia
+    code: ZM
+    emoji: "\U0001F1FF\U0001F1F2"
+    unicode: U+1F1FF U+1F1F2
+    image: ZM.svg
+    dial_code: +260
+  - name: Zimbabwe
+    code: ZW
+    emoji: "\U0001F1FF\U0001F1FC"
+    unicode: U+1F1FF U+1F1FC
+    image: ZW.svg
+    dial_code: +263
+  _prefab: {fileID: 1950561916473968309, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+  _parentDialCode: {fileID: 2127112662}
+  _testImage: {fileID: 1506932330}
 --- !u!1 &2136382354
 GameObject:
   m_ObjectHideFlags: 0
@@ -139758,10 +142319,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 203279074}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 63, y: -213}
-  m_SizeDelta: {x: 759.1429, y: 60}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 60}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2137481254
 MonoBehaviour:
@@ -140870,13 +143431,131 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146620369}
   m_CullTransparentMesh: 1
+--- !u!1001 &905045692808340879
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2127112662}
+    m_Modifications:
+    - target: {fileID: 2685961798022817996, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_Name
+      value: Dial Code Data
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685961798022817996, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685961798022817996, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846174844687153754, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299997313258422869, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670355622445862319, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204188450278312525, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7027958d9e250244e8f20f6c4ba2301f, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 985522004}
   - {fileID: 330585546}
-  - {fileID: 410087041}
+  - {fileID: 1281281117}
+  - {fileID: 1254570880}
   - {fileID: 832575519}
   - {fileID: 616311991}
   - {fileID: 910603489}

@@ -91,23 +91,23 @@ public class SignupPassword : MonoBehaviour
 
         if (!containsUppercase)
         {
-            Debug.Log("password must have Uppercase characters");
-            ErrorMessage("Password must have Uppercase characters");
+            Debug.Log("password must have Uppercase, Lowercase, Digit, Special characters.");
+            ErrorMessage("password must have Uppercase, Lowercase, Digit, Special characters.");
         }
         else if (!containsLowercase)
         {
             Debug.Log("password must have Lowercase characters");
-            ErrorMessage("Password must have Lowercase characters");
+            ErrorMessage("password must have Uppercase, Lowercase, Digit, Special characters.");
         }
         else if (!containsDigit)
         {
             Debug.Log("password must have Digit");
-            ErrorMessage("Password must have Digit");
+            ErrorMessage("password must have Uppercase, Lowercase, Digit, Special characters.");
         }
         else if (!containsSpecialChar)
         {
             Debug.Log("password must have Special characters");
-            ErrorMessage("Password must have Special characters");
+            ErrorMessage("password must have Uppercase, Lowercase, Digit, Special characters.");
         }
 
         return containsUppercase && containsLowercase && containsDigit && containsSpecialChar;

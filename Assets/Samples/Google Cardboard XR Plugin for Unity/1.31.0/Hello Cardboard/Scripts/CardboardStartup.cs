@@ -18,6 +18,7 @@
 
 using Google.XR.Cardboard;
 using UnityEngine;
+using System.Linq;
 using System.Collections;
 using UnityEngine.XR.Management;
 using UnityEngine.SceneManagement;
@@ -98,13 +99,21 @@ public class CardboardStartup : MonoBehaviour
         //  Give Unity time to fully destroy stereo render pipeline
         yield return new WaitForEndOfFrame();
         yield return new WaitForSeconds(0.1f);
+        //var cardboardLoader = xrManager.loaders.FirstOrDefault(l => l.name.Contains("Cardboard"));
+        //xrManager.TryRemoveLoader(cardboardLoader);
+
+        //foreach (var l in xrManager.loaders.ToArray())
+        //    xrManager.TryRemoveLoader(l);
+
+        //yield return new WaitForSeconds(0.2f);
 
         //  Clear Cardboard leftover objects
         Resources.UnloadUnusedAssets();
         System.GC.Collect();
 
         SceneManager.LoadScene(0);
+
     }
 
-
+    
 }

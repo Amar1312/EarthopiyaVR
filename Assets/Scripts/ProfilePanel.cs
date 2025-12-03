@@ -10,11 +10,12 @@ using SignInSample;
 public class ProfilePanel : MonoBehaviour
 {
     public TMP_InputField _firstName, _lastName, _dateofBirth, _number, _email;
-    public Button _saveBtn, _backBtn, _delateBtn;
+    public Button _saveBtn, _backBtn, _delateBtn, _dialCodeBtn;
     public Image _profileImage;
     public GameObject _maskingImage;
     public GameObject _updateSuccess;
-    public TextMeshProUGUI _errorMessage;
+    public TextMeshProUGUI _errorMessage, _dialText;
+    public GameObject _dialCodeScroll;
 
     private UIManager _uiManager;
 
@@ -36,6 +37,7 @@ public class ProfilePanel : MonoBehaviour
         _saveBtn.onClick.AddListener(SaveBtnClick);
         _backBtn.onClick.AddListener(BackBtnClick);
         _delateBtn.onClick.AddListener(DelateBtnClick);
+        _dialCodeBtn.onClick.AddListener(DialBtnClick);
 
         _firstName.onEndEdit.AddListener(delegate { ValueChangeCheck(); });
         _lastName.onEndEdit.AddListener(delegate { ValueChangeCheck(); });
@@ -87,7 +89,7 @@ public class ProfilePanel : MonoBehaviour
         _dateofBirth.text = responce.data.user.dob;
         _number.text = responce.data.user.phone_no;
         _email.text = responce.data.user.email;
-        Debug.Log(responce.data.user.firstname + " N " + DataManager.Instance._profileData.data.user.firstname);
+        //Debug.Log(responce.data.user.firstname + " N " + DataManager.Instance._profileData.data.user.firstname);
 
         if (!string.IsNullOrWhiteSpace(responce.data.user.profile_image_url))
         {
@@ -144,6 +146,17 @@ public class ProfilePanel : MonoBehaviour
         Debug.Log(Date);
 
         APIManager.Instance.UpdateProfile(_firstName.text, _lastName.text, Date, _number.text, _profileImage, UpdateProfile);
+    }
+
+    void DialBtnClick()
+    {
+        _dialCodeScroll.SetActive(true);
+    }
+
+    public void SetDialCode(string code)
+    {
+        _dialText.text = code;
+        _dialCodeScroll.SetActive(false);
     }
 
     void UpdateProfile(ProfileResponce responce)

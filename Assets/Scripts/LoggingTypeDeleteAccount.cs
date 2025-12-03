@@ -28,7 +28,7 @@ public class LoggingTypeDeleteAccount : MonoBehaviour
         }
         else
         {
-            _loggingText.text = "Email";
+            _loggingText.text = responce.data.user.email;
             _confirmBtn.gameObject.SetActive(true);
             _googleBtn.gameObject.SetActive(false);
             _appleBtn.gameObject.SetActive(false);

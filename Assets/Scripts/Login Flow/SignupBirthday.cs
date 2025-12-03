@@ -68,7 +68,7 @@ public class SignupBirthday : MonoBehaviour
         }
         else if (!ValidateFinalDate())
         {
-            Debug.Log("Enter Valid Date");
+            Debug.Log("Enter Valid Date of Birth");
             ErrorMessage("Enter Valid Date");
         }
         else
@@ -118,6 +118,10 @@ public class SignupBirthday : MonoBehaviour
             _uiManager.SwitchScreen(2);
             DataManager.Instance._userData = responces;
             _uiManager._splaceScreenVideo.SetDirectAudioMute(0, true);
+        }
+        else
+        {
+            ErrorMessage(responces.message);
         }
     }
 

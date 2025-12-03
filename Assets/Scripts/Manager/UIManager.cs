@@ -5,6 +5,10 @@ using System.Collections.Generic;
 using UnityEngine.Video;
 using UnityEngine.UI;
 using System.Globalization;
+using System.IO;
+using UnityEngine.Networking;
+using System.Text;
+using System.Collections;
 
 public class UIManager : MonoBehaviour
 {
@@ -183,7 +187,34 @@ public class UIManager : MonoBehaviour
         //_loadOnce = true;
     }
 
+    public void LoadSVGImage(string imageUrl, Image targetImage, float maxWidth)
+    {
+        StartCoroutine(LoadSVG(imageUrl, targetImage, maxWidth));
+    }
 
+    private IEnumerator LoadSVG(string url, Image targetImage, float maxWidth)
+    {
+        UnityWebRequest req = UnityWebRequest.Get(url);
+        yield return req.SendWebRequest();
+
+        if (req.result != UnityWebRequest.Result.Success)
+        {
+            Debug.LogError("SVG Download Error: " + req.error);
+            yield break;
+        }
+
+        byte[] svgBytes = req.downloadHandler.data;
+
+        Texture2D tex = SVGToTexture.ConvertSVGToTexture(svgBytes, 512, 512);
+
+        targetImage.sprite = Sprite.Create(
+            tex,
+            new Rect(0, 0, tex.width, tex.height),
+            new Vector2(0.5f, 0.5f)
+        );
+
+        SetMaxSize(maxWidth, targetImage);
+    }
 
     public void SetMaxSize(float maxWidth, Image _meImage)
     {
@@ -238,4 +269,6 @@ public class UIManager : MonoBehaviour
 
         return null;
     }
+
+    
 }

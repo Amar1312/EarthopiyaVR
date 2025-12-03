@@ -25,10 +25,14 @@ public class EnterPasswordDeleteAccount : MonoBehaviour
 
     void ConfirmBtnClick()
     {
+        if (string.IsNullOrWhiteSpace(_passwordInput.text))
+        {
+            _errorPassword.SetActive(true);
+            Invoke(nameof(OffErrorPassword), 2f);
+            return;
+        }
         string Email = DataManager.Instance._profileData.data.user.email;
         int delete = 0;
-
-        Debug.Log(Email + _passwordInput.text + delete);
         APIManager.Instance.DeleteAccount(Email, _passwordInput.text, delete, DeleteAccount);
     }
 
@@ -54,7 +58,7 @@ public class EnterPasswordDeleteAccount : MonoBehaviour
 
     void BackBtnClick()
     {
-        _deletePanel.OnOnePanel(1);
+        _deletePanel.OnOnePanel(0);
     }
 
 }

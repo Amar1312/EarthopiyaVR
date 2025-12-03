@@ -138,6 +138,19 @@ public class DeleteAccountResponce
 }
 #endregion
 
+#region Country Data
+[Serializable]
+public class CountryData
+{
+    public string name;
+    public string code;
+    public string emoji;
+    public string unicode;
+    public string image;
+    public string dial_code;
+}
+#endregion
+
 #region Log Out
 [Serializable]
 public class LogOutResponce

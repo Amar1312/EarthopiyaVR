@@ -2,8 +2,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using System.Linq;
 using System.Globalization;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+using System.Collections;
+using UnityEngine.XR.Management;
+using UnityEngine.XR;
+using System.Collections.Generic;
 
 public class PassportHomePanel : MonoBehaviour
 {
@@ -18,6 +24,10 @@ public class PassportHomePanel : MonoBehaviour
 
     private UIManager _uiManager;
     private bool oneTime = false;
+
+    const string CardboardLoaderName = "CardboardXRLoader";
+    const string ARCoreLoaderName = "ARCoreLoader";
+    XRManagerSettings xrManager;
 
     private void OnEnable()
     {
@@ -50,7 +60,9 @@ public class PassportHomePanel : MonoBehaviour
 
     void QRBtnClick()
     {
-
+        //SceneManager.LoadScene(2);
+        //StartCoroutine(StartARModeCoroutine());
+        //StartCoroutine(StartARCoroutine());
     }
 
     private void OnScrollValueChanged(Vector2 value)
@@ -143,5 +155,41 @@ public class PassportHomePanel : MonoBehaviour
         }
 
         return null;
+    }
+
+    private IEnumerator StartARCoroutine()
+    {
+        Debug.Log("Stopping XR...");
+        xrManager = XRGeneralSettings.Instance.Manager;
+        UnityEngine.XR.XRSettings.enabled = false;          //  VERY IMPORTANT FIX
+        yield return null;
+        xrManager.StopSubsystems();
+        xrManager.DeinitializeLoader();
+        yield return new WaitForSeconds(0.1f);
+        var cardboardLoader = xrManager.loaders.FirstOrDefault(l => l.name.Contains("Cardboard"));
+        xrManager.TryRemoveLoader(cardboardLoader);
+
+        foreach (var l in xrManager.loaders.ToArray())
+            xrManager.TryRemoveLoader(l);
+
+        yield return new WaitForSeconds(0.2f);
+
+        Debug.Log("Selecting ARCore loader...");
+        var arcoreLoader = xrManager.loaders.FirstOrDefault(l => l.name.Contains("ARCore"));
+        xrManager.TrySetLoaders(new List<XRLoader> { arcoreLoader });
+
+        yield return xrManager.InitializeLoader();
+        xrManager.StartSubsystems();
+        UnityEngine.XR.XRSettings.enabled = true;        //  Enable XR after subsystems start
+
+        //  REQUIRED DELAY (fixes Cardboard double panel)
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(0.15f);
+
+        Debug.Log("AR MODE ON");
+        SceneManager.LoadScene(2);
+
+        //yield return new WaitForSeconds(0.5f);
+        //CameraSetupManager.Instance.SetupARCamera();
     }
 }
