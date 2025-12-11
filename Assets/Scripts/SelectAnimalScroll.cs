@@ -150,7 +150,8 @@ public class SelectAnimalScroll : MonoBehaviour
 
     public void QRBtnClick()
     {
-        //SceneManager.LoadScene(2);
+        SceneController.Instance._gameOn = 2;
+        SceneManager.LoadScene(2);
     }
 
 }

@@ -62,14 +62,24 @@ public class UIManager : MonoBehaviour
         Application.targetFrameRate = 30;
 
         int startPanel = SceneController.Instance._gameOn;
-        if (startPanel == 0)
-        {
-            SwitchScreen(0);
-        }
-        else if (startPanel == 1)
+        if (startPanel == 1)
         {
             SwitchScreen(10);
             _splaceScreenVideo.SetDirectAudioMute(0, true);
+        }
+        else if (startPanel == 2)
+        {
+            SwitchScreen(8);
+            _splaceScreenVideo.SetDirectAudioMute(0, true);
+        }
+        else if (startPanel == 3)
+        {
+            SwitchScreen(11);
+            _splaceScreenVideo.SetDirectAudioMute(0, true);
+        }
+        else
+        {
+            SwitchScreen(0);
         }
 
         _ticketsBtnSafari.onClick.AddListener(TicketBtnClick);
@@ -270,5 +280,5 @@ public class UIManager : MonoBehaviour
         return null;
     }
 
-    
+
 }
