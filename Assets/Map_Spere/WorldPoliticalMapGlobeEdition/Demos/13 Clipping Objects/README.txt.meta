@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2fdac8b9eccbf4bb19e4ac2d5f651009
+timeCreated: 1437611714
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/13 Clipping Objects/README.txt
+  uploadId: 830476

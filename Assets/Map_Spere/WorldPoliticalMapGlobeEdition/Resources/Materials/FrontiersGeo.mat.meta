@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cbab9e03fbbcf4ea3b94d6507e3a261c
+timeCreated: 1436789014
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/FrontiersGeo.mat
+  uploadId: 830476

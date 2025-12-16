@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fdc8f1e0902fb4231bab7b5b7de43921
+timeCreated: 1494355732
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/HexaCellHighlightMat.mat
+  uploadId: 830476

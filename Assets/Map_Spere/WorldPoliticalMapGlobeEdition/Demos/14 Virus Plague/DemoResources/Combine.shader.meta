@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d800d52feebcc4bcfaf38421e8ee127f
+timeCreated: 1530715679
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/14 Virus Plague/DemoResources/Combine.shader
+  uploadId: 830476

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3dc9e2c28b25f4d2fa8dc5d11cbaa131
+timeCreated: 1501665747
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Shaders/FogOfWar.cginc
+  uploadId: 830476

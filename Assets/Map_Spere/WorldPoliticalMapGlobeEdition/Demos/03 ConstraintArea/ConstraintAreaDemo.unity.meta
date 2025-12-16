@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6e579ed6f50c84b9e9c8f02798db001c
+timeCreated: 1459849378
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/03 ConstraintArea/ConstraintAreaDemo.unity
+  uploadId: 830476

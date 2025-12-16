@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e4508d0e4ea5d4b38a42cb65210d2168
+timeCreated: 1438671525
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/SphereOverlay.mat
+  uploadId: 830476

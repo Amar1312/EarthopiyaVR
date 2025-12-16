@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b6f639df76eb64be7b8b10bb380772fe
+timeCreated: 1499255802
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/HexaGridMatNoExtrusionAlpha.mat
+  uploadId: 830476

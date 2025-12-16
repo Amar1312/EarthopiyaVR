@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: b7431135a690a4c6ca4f2d54efe01a04
+timeCreated: 1460448480
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/04 CircleMarkers/AddCircleMarkerScript.cs
+  uploadId: 830476

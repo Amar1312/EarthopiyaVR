@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d12be52a216cb472ea9a8ad75731acfb
+timeCreated: 1442481995
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/EarthScenic.mat
+  uploadId: 830476

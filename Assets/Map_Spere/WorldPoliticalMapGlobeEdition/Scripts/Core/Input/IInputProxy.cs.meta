@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0846f9c38994b46728279d3ec897c974
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Scripts/Core/Input/IInputProxy.cs
+  uploadId: 830476

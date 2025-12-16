@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 459967905dac14f74bae499467c596e2
+timeCreated: 1486984187
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Shaders/UnlitTileOverlay.shader
+  uploadId: 830476

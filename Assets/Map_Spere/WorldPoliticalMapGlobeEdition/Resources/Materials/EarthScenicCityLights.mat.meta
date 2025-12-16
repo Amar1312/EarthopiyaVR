@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 630924b741dc741d4abaf72a9e486882
+timeCreated: 1465817240
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/EarthScenicCityLights.mat
+  uploadId: 830476

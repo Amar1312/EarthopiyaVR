@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: be13ad55a5d5844b390ae0ffaf081506
+timeCreated: 1512938271
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Prefabs/Moon.prefab
+  uploadId: 830476

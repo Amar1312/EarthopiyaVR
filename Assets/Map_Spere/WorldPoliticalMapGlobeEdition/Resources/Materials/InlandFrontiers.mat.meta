@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 86bc462e428634946a388e83e5ac727b
+timeCreated: 1446371872
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/InlandFrontiers.mat
+  uploadId: 830476

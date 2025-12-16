@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c88e8a48b81a941b194d96e5e5551482
+timeCreated: 1507041789
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/12 UI Canvas/Resources/PanelInfo.prefab
+  uploadId: 830476

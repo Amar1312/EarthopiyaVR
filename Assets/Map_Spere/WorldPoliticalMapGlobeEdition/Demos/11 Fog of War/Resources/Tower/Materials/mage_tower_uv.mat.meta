@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f8fd3bacc0fcc42e1aa241bde6e10e83
+timeCreated: 1453714512
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/11 Fog of War/Resources/Tower/Materials/mage_tower_uv.mat
+  uploadId: 830476

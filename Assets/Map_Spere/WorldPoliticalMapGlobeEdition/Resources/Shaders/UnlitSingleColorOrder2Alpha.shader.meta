@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 184ee0d7ea02f4275b546b0703146563
+timeCreated: 1487096588
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Shaders/UnlitSingleColorOrder2Alpha.shader
+  uploadId: 830476

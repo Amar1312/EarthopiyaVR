@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 68ba07a1b9cc8479bad1a5ac3d04c073
+timeCreated: 1449938118
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/CitiesCapitalRegion.mat
+  uploadId: 830476

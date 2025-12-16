@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 307e11262221f49838da2a4739f4e6e8
+timeCreated: 1465736519
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/EarthHighResScenicScatterCityLights.mat
+  uploadId: 830476

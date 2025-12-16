@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 3ab84ffd8f7b3425795654b980b8bea0
+timeCreated: 1491575149
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Scripts/Core/Behaviours/TileInfoEx.cs
+  uploadId: 830476

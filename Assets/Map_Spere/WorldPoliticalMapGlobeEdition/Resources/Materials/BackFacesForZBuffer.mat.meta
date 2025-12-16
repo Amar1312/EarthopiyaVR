@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 22796e52a652b442bb20e24af60eadeb
+timeCreated: 1502366335
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/BackFacesForZBuffer.mat
+  uploadId: 830476

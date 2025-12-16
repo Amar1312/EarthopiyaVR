@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3cea955b251be4041bf27401b59d2f1f
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Geodata/provinces10_bin.txt
+  uploadId: 830476

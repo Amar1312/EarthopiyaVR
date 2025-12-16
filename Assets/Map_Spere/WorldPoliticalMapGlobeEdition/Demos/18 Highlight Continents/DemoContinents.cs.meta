@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5d512b5f115314bde9a349c1fc761658
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/18 Highlight Continents/DemoContinents.cs
+  uploadId: 830476

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c2b97d55ab78b4212987f90a007b310f
+timeCreated: 1530624385
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/UnlitGlobeClip.mat
+  uploadId: 830476

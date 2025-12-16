@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 870f7014e882f409999d71f98e67cab4
+timeCreated: 1438183174
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Shaders/UnlitCities.shader
+  uploadId: 830476

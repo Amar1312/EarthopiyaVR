@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1eecca1971a6e4330a67ead07c1fa0bd
+timeCreated: 1438187142
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/Outline.mat
+  uploadId: 830476

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 512792b5cb8ee4183941e80464b62115
+timeCreated: 1470986979
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Shaders/UnlitEarth16KScenic.shader
+  uploadId: 830476

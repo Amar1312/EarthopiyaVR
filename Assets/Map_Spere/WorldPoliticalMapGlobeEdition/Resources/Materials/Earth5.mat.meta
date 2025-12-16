@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e64e143c849a841778fb3f50e0179c22
+timeCreated: 1437579479
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/Earth5.mat
+  uploadId: 830476

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: e51075ed03b13437e9eef17170630b91
+timeCreated: 1484245366
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Scripts/PolyTri/Utility/FixedBitArray3.cs
+  uploadId: 830476

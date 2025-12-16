@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dc44d4ecdb38f4d1789db93188ccee08
+timeCreated: 1502367567
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Prefabs/WorldMapGlobeBackFaces.prefab
+  uploadId: 830476

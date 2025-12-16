@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f141c682acf8f475a8c9508686830980
+timeCreated: 1530624267
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Shaders/UnlitGlobeClipAlpha.shader
+  uploadId: 830476

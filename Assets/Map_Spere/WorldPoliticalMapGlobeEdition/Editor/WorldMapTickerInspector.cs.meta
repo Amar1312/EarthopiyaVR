@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: f89bf84abc4954df3a835a1209c578ad
+timeCreated: 1438765885
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Editor/WorldMapTickerInspector.cs
+  uploadId: 830476

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 68ba10856e84d48b1a52c150d5949148
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Scripts/Core/Drawing/TubeRenderer.cs
+  uploadId: 830476

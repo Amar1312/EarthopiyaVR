@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 7a2cdb6c742c24a1da0dfdc41cbef0e1
+timeCreated: 1437118605
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/01 GeneralDemo/GUIResizer.cs
+  uploadId: 830476

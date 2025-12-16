@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e81d4270b5f3f4f5ca810af872e558b5
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Shaders/FogOfWar_Pass2.shader
+  uploadId: 830476

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e37569131c88c4083acb206e9055ddb2
+timeCreated: 1442426016
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/01 GeneralDemo/Resources/Building/buildingRoof.mat
+  uploadId: 830476

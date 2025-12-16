@@ -28,6 +28,8 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class CardboardStartup : MonoBehaviour
 {
+    private bool isExitingVR = false;
+
     /// <summary>
     /// Start is called before the first frame update.
     /// </summary>
@@ -51,6 +53,11 @@ public class CardboardStartup : MonoBehaviour
     /// </summary>
     public void Update()
     {
+        if (isExitingVR)
+        {
+            return;
+        }
+
         if (Api.IsGearButtonPressed)
         {
             Api.ScanDeviceParams();
@@ -111,6 +118,7 @@ public class CardboardStartup : MonoBehaviour
         Resources.UnloadUnusedAssets();
         System.GC.Collect();
 
+        isExitingVR = true;
         SceneManager.LoadScene(0);
 
     }

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d2d5f8c5694c74033b4274b15c9d5b83
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Scripts/Core/Internal/WPMInternal.Navigation.cs
+  uploadId: 830476

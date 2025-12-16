@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: cd3680f1d962c44cfa26c67e90b17af6
+timeCreated: 1450009765
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Scripts/WorldMapGlobeContinents.cs
+  uploadId: 830476

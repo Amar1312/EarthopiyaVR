@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 1d4fbd0aae5a7457b9bb901690bb9dbf
+timeCreated: 1442432467
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Scripts/Core/Drawing/MarkerBlinker.cs
+  uploadId: 830476

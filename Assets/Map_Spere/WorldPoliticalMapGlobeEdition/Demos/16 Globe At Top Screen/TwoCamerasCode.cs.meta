@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 21c969dac86774c8ea3e206dc5910580
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/16 Globe At Top Screen/TwoCamerasCode.cs
+  uploadId: 830476

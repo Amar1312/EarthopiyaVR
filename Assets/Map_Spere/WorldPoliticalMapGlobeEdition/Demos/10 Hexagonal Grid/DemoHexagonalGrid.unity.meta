@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 15183fb759927498688e593593e906a5
+timeCreated: 1494354873
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/10 Hexagonal Grid/DemoHexagonalGrid.unity
+  uploadId: 830476

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 78211aecb6aca4f3d84eef71d7357b1e
+timeCreated: 1460448480
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/04 CircleMarkers/CircleMarkerDemo.unity
+  uploadId: 830476

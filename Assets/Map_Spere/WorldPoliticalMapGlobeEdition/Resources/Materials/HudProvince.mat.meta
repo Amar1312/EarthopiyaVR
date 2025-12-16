@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8a09850bb205e409ab9b42e93c3d646c
+timeCreated: 1438068266
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/HudProvince.mat
+  uploadId: 830476

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f8f5b6deddf8a4f6cbefbe51bcffbaaf
+timeCreated: 1501626184
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Prefabs/SphereFoWLayer.prefab
+  uploadId: 830476

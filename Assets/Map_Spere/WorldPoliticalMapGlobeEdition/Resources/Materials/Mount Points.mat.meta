@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c628205a120474476bce2b9f52c29ff5
+timeCreated: 1450004624
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/Mount Points.mat
+  uploadId: 830476

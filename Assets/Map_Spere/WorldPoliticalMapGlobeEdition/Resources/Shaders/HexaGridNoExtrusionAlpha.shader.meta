@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: da23abe6775484a7e91abd79424d91c5
+timeCreated: 1499255741
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Shaders/HexaGridNoExtrusionAlpha.shader
+  uploadId: 830476

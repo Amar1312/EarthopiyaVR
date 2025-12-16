@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e30db27208c56456c82cc42416bde699
+timeCreated: 1466331577
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Shaders/UnlitCountrySurfacesColorAlpha.shader
+  uploadId: 830476

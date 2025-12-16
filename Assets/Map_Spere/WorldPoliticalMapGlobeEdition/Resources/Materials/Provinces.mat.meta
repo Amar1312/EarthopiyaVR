@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0f8cbaf547146452ba178149a7e0dfd8
+timeCreated: 1437937332
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/Provinces.mat
+  uploadId: 830476

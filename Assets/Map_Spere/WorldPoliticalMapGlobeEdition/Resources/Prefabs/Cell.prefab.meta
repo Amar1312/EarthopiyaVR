@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0042b739a2ccc4f4b9d7a290d4b8b88e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Prefabs/Cell.prefab
+  uploadId: 830476

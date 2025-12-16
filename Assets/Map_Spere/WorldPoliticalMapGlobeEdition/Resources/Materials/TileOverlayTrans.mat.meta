@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e4e0ea387bcd8437f8b982266f3eba0e
+timeCreated: 1487692245
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/TileOverlayTrans.mat
+  uploadId: 830476

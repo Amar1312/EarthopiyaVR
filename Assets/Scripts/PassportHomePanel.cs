@@ -25,13 +25,20 @@ public class PassportHomePanel : MonoBehaviour
     private UIManager _uiManager;
     private bool oneTime = false;
 
-    const string CardboardLoaderName = "CardboardXRLoader";
-    const string ARCoreLoaderName = "ARCoreLoader";
-    XRManagerSettings xrManager;
 
     private void OnEnable()
     {
-        GetProfileAPiCall();
+
+        if (SceneController.Instance._gameOn == 3)
+        {
+            SceneController.Instance._gameOn = 0;
+            Invoke(nameof(GetProfileAPiCall), 0.5f);
+        }
+        else
+        {
+            GetProfileAPiCall();
+        }
+
         if (oneTime)
         {
             _startSafari.SetActive(false);

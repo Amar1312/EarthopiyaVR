@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: b8934ec67036a488fb37fd2b08d7d92a
+timeCreated: 1473591914
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/05 Sorting Cities/SortingCities.cs
+  uploadId: 830476

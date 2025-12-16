@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0c97b2364e9df40adbeff69bd5cdf30f
+timeCreated: 1473771385
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/EarthURPShaderHighRes.mat
+  uploadId: 830476

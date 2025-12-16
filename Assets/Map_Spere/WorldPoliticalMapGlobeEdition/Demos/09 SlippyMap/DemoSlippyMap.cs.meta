@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 5b97e16e1bc214220899a71e927a3da1
+timeCreated: 1487858312
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/09 SlippyMap/DemoSlippyMap.cs
+  uploadId: 830476

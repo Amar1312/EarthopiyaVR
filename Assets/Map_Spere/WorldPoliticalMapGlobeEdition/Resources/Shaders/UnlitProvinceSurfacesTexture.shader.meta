@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 542cd90c80dc54ab2bfaa6932a0c9a32
+timeCreated: 1513504791
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Shaders/UnlitProvinceSurfacesTexture.shader
+  uploadId: 830476

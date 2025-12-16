@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f7bc04e44a48f46f1918850fa8fd5471
+timeCreated: 1470987059
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Shaders/UnlitEarth16KScenicCityLights.shader
+  uploadId: 830476

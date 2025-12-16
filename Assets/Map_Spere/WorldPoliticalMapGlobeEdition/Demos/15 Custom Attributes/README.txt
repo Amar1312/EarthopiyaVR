@@ -1,0 +1,2 @@
+This demo includes a script called "CustomAttributesDemo.cs" with examples about the usage of custom attributes.
+Please open the script with your code editor to learn about the different options used in this example.

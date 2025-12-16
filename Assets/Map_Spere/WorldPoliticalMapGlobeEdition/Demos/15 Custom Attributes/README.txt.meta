@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b4748665c14c64f33b4de28cdc9bddc7
+timeCreated: 1437611714
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/15 Custom Attributes/README.txt
+  uploadId: 830476

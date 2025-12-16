@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 550c2a53bcaf84c6ea301ebb18681f04
+timeCreated: 1501604532
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Materials/SphereFoWPass1.mat
+  uploadId: 830476

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f2ca6f049ea6c4f688d57bd970a7b953
+timeCreated: 1438181882
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Prefabs/CitySpot.prefab
+  uploadId: 830476

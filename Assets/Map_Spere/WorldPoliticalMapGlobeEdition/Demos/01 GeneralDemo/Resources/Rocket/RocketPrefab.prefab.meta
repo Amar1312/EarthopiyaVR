@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7f54fdf6a23e64b789f31a0e6dc9538b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/01 GeneralDemo/Resources/Rocket/RocketPrefab.prefab
+  uploadId: 830476

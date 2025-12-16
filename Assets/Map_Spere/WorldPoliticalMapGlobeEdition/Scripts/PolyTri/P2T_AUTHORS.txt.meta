@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 457d516acaa0d44668e894484110f1d2
+timeCreated: 1484245366
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Scripts/PolyTri/P2T_AUTHORS.txt
+  uploadId: 830476

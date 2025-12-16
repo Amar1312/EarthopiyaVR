@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f999cfc7c57399144ac708b6a84d035b
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Shaders/UnlitEarthGlow2.shader
+  uploadId: 830476

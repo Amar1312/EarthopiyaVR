@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b197a3a870dff4b1c9ab95d2e9b8a208
+timeCreated: 1475511919
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/08 Rectangle Selection/DemoRectangleSelection.unity
+  uploadId: 830476

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f56dd06e87aa34d24a898944ff21b68a
+timeCreated: 1446551576
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Shaders/UnlitSingleColorMasked.shader
+  uploadId: 830476

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7bd03bbd335c6406daeb74664ef06d9f
+timeCreated: 1499256195
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Resources/Shaders/HexaTileTexturedAlpha.shader
+  uploadId: 830476

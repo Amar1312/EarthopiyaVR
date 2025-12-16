@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c41d246b598394d678a7bb0d7f668764
+timeCreated: 1436788570
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/13 Clipping Objects/Scene_URP.unity
+  uploadId: 830476

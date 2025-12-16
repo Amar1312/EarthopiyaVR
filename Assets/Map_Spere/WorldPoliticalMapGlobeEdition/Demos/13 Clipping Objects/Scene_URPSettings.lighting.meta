@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 19b3dcd448c5b4d31bc151b08a62a06c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 150643
+  packageName: World Map Globe Edition 2
+  packageVersion: 19.7
+  assetPath: Assets/WorldPoliticalMapGlobeEdition/Demos/13 Clipping Objects/Scene_URPSettings.lighting
+  uploadId: 830476
