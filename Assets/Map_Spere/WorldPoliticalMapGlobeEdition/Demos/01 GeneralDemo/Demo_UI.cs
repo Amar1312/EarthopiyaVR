@@ -484,17 +484,15 @@ namespace WPM
         public void AddMarkerCircleOnRandomPosition()
         {
             // Draw a beveled circle
-            //Vector3 sphereLocation = Random.onUnitSphere * 0.5f;
-            Vector3 sphereLocation = new Vector3(-0.873705f, 0.3793454f, 0.304527f) * 0.5f;
+            Vector3 sphereLocation = Random.onUnitSphere * 0.5f;
             float km = Random.value * 500 + 500; // Circle with a radius of (500...1000) km
 
             //			sphereLocation = map.cities[map.GetCityIndex("Paris")].unitySphereLocation;
             //			km = 1053;
             //			sphereLocation = map.cities[map.GetCityIndex("New York")].unitySphereLocation;
             //			km = 500;
-            //map.AddMarker(MARKER_TYPE.CIRCLE_PROJECTED, sphereLocation, km, 0.975f, 1.0f, new Color(0.85f, 0.45f, 0.85f, 0.9f));
-            //map.AddMarker(MARKER_TYPE.CIRCLE_PROJECTED, sphereLocation, km, 0, 0.975f, new Color(0.5f, 0, 0.5f, 0.9f));
-            map.AddMarker(MARKER_TYPE.CIRCLE_PROJECTED, sphereLocation, km, 0, 0.975f, new Color(255f, 255f, 255f, 0.9f));
+            map.AddMarker(MARKER_TYPE.CIRCLE_PROJECTED, sphereLocation, km, 0.975f, 1.0f, new Color(0.85f, 0.45f, 0.85f, 0.9f));
+            map.AddMarker(MARKER_TYPE.CIRCLE_PROJECTED, sphereLocation, km, 0, 0.975f, new Color(0.5f, 0, 0.5f, 0.9f));
             map.FlyToLocation(sphereLocation);
         }
 

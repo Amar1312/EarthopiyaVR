@@ -25,7 +25,6 @@ public class AnimalSafariPanel : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //map = WorldMapGlobe.instance;
         _vrSafariBtn.onClick.AddListener(VrSafariBtnClick);
         _zoomInBtn.onClick.AddListener(ZoomInBtnClick);
         _zoomOutBtn.onClick.AddListener(ZoomOutBtnClick);
@@ -97,19 +96,45 @@ public class AnimalSafariPanel : MonoBehaviour
 
     void ChangeMapBtnClick()
     {
-        int currentEarthStyle = (int)map.earthStyle;
-        currentEarthStyle = (currentEarthStyle + 1) % 20;
-        map.earthStyle = (EARTH_STYLE)currentEarthStyle;
+        //int currentEarthStyle = (int)map.earthStyle;
+        //currentEarthStyle = (currentEarthStyle + 1) % 20;
+        //map.earthStyle = (EARTH_STYLE)currentEarthStyle;
+
+
+        //Debug.Log("try to change Earth " + currentEarthStyle);
+        //if (currentEarthStyle == 8)
+        //{
+        //    currentEarthStyle = (3) % 20;
+        //    map.earthStyle = (EARTH_STYLE)currentEarthStyle;
+        //}
+        //else
+        //{
+        //    currentEarthStyle = (8) % 20;
+        //    map.earthStyle = (EARTH_STYLE)currentEarthStyle;
+        //}
+
+        if (map.tileServer == TILE_SERVER.ESRISatellite)
+        {
+            map.tileServer = TILE_SERVER.OpenStreeMap;
+            Debug.Log("Switched to Open Street Map");
+        }
+        else
+        {
+            map.tileServer = TILE_SERVER.ESRISatellite;
+            Debug.Log("Switched to ESRI Satellite");
+        }
     }
 
     void CenterMapBtnClick()
     {
         //Debug.Log("Btn Click" + cityIndex);
         //int countryIndex = map.GetCountryIndex(_sphereLocation);
-        int countryIndex = map.GetCountryNearPoint(_sphereLocation);
+        //int countryIndex = map.GetCountryNearPoint(_sphereLocation);
         //float zoomLevel = map.GetCountryMainRegionZoomExtents(countryIndex);
         //map.FlyToCountry(countryIndex, 2f, zoomLevel, 0.5f);
-        map.FlyToCountry(countryIndex, 2f, 2f, 0f);
+        //map.FlyToCountry(countryIndex, 2f, 2f, 0f);
+
+        map.FlyToLocation(_sphereLocation, 2f, 2f, 0f);
     }
 
     public void SetMarker()
