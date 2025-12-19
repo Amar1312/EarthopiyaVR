@@ -116,10 +116,6 @@ public class SelectAnimalScroll : MonoBehaviour
         }
         _scrollBtn[Index].SelectImage();
 
-        for (int i = 0; i < _scrollImage.Count; i++)
-        {
-            _scrollImage[i].DefaultOff();
-        }
         _mainScroll.GoToPanel(Index);
 
         Debug.Log(Index);

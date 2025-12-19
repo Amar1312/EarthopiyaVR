@@ -11,12 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.31.0/Hello Cardboard/Scenes/HelloCardboard.unity
     guid: 03c48c5e809944fa4afcae9973709f26
-  - enabled: 0
-    path: Assets/Scenes/ReadQRCode.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/ARScene.unity
-    guid: 2eb9a01594d96bb41aa3cec85ed2acc5
+    path: Assets/Scenes/Vuforiya QR Read.unity
+    guid: ec87908dd49b77b4eaa6e4ae34107725
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: cb2e4556c19d9204692922e06ac26d88, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 9ae11fc2a157f574aaa7c4f7128cf62c, type: 2}
