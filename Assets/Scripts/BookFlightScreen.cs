@@ -8,6 +8,7 @@ public class BookFlightScreen : MonoBehaviour
     public List<string> _DestinationString;
     public FlightData _flightData;
     public Button _searchFlightBtn, _backBtn;
+    public bool _destinetionOn;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,8 +23,17 @@ public class BookFlightScreen : MonoBehaviour
         {
             return;
         }
-        UIManager.instance._searchDetailScript._flightData = _flightData;
-        UIManager.instance._searchDetailScript.SetData();
+
+        if (_destinetionOn)
+        {
+            UIManager.instance._searchDetailScript._flightData = _flightData;
+            UIManager.instance._searchDetailScript.SetData();
+        }
+        else
+        {
+            UIManager.instance._noFlightDetailScript._flightData = _flightData;
+            UIManager.instance.SwitchScreen(14);
+        }
 
     }
     void BackBtnClick()

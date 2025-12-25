@@ -35,7 +35,7 @@ public class AirplaneMovement : MonoBehaviour
     public SelectAnimalScroll _animalScroll;
 
     private Coroutine planeOff;
-   
+
     private RectTransform currentMapDestination;
     private Vector2 mapStartPosition;
     private Vector2 mapTargetPosition;
@@ -47,7 +47,7 @@ public class AirplaneMovement : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     public void SetDestinetion(RectTransform transform, RectTransform mapDestinetion)
@@ -120,6 +120,10 @@ public class AirplaneMovement : MonoBehaviour
         else if (_firstPoint[2] == privacePoint && _secondPoint[1] == pointB)
         {
             adjustedAngle = adjustedAngle + 20f;
+        }
+        else if ((_firstPoint[3] == privacePoint || _firstPoint[4] == privacePoint) && _secondPoint[2] == pointB)
+        {
+            adjustedAngle = adjustedAngle - 4f;
         }
 
         airplane.DORotate(new Vector3(0, 0, adjustedAngle), rotateDuration)

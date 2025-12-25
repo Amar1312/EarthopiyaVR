@@ -164,6 +164,7 @@ public class ProfilePanel : MonoBehaviour
         if (responce.status)
         {
             UpdateSuccess();
+            responce.data.user.created_at = _uiManager.ConvertToReadableDateForCreateDate(responce.data.user.created_at);
             DataManager.Instance._profileData = responce;
         }
     }

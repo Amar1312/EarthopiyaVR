@@ -126,7 +126,7 @@ namespace SignInSample
         {
             if (responces.status)
             {
-                UIManager.instance.SwitchScreen(2);
+                UIManager.instance.SwitchScreen(8);
                 UIManager.instance._splaceScreenVideo.SetDirectAudioMute(0, true);
                 DataManager.Instance._userData = responces;
             }

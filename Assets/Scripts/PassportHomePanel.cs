@@ -13,13 +13,14 @@ using System.Collections.Generic;
 
 public class PassportHomePanel : MonoBehaviour
 {
-    public Button _settingBtn, _editBtn, _qrBtn;
-    public TextMeshProUGUI _surName, _givenName, _doBirth;
+    public Button _settingBtn, _editBtn, _qrBtn, _firstQrBtn;
+    public TextMeshProUGUI _surName, _givenName, _doBirth, _titleName, _safariComplate, _cretateDate;
     public Image _passportImage;
     public GameObject _passportImageParent;
     public float _passportWidth;
     public ScrollRect _safariScroll;
     public GameObject _startSafari;
+    public List<Image> _stampImage; // Index Must Same As QR Read Vuforiya_QR_Read Script _QRStringData List
 
 
     private UIManager _uiManager;
@@ -51,6 +52,7 @@ public class PassportHomePanel : MonoBehaviour
         _settingBtn.onClick.AddListener(SettingBtnClick);
         _editBtn.onClick.AddListener(EditBtnClick);
         _qrBtn.onClick.AddListener(QRBtnClick);
+        _firstQrBtn.onClick.AddListener(QRBtnClick);
         _safariScroll.onValueChanged.AddListener(OnScrollValueChanged);
     }
 
@@ -88,9 +90,12 @@ public class PassportHomePanel : MonoBehaviour
         if (responce.status)
         {
             responce.data.user.dob = UIManager.instance.ConvertIsoToDateOnly(responce.data.user.dob);
+            responce.data.user.created_at = UIManager.instance.ConvertToReadableDateForCreateDate(responce.data.user.created_at);
             _surName.text = responce.data.user.lastname;
             _givenName.text = responce.data.user.firstname;
+            _titleName.text = responce.data.user.firstname + " " + responce.data.user.lastname;
             _doBirth.text = FormatDate(responce.data.user.dob);
+            _cretateDate.text = responce.data.user.created_at;
             responce.data.user.dob = ConvertToSlashFormat(responce.data.user.dob);
 
             if (!string.IsNullOrWhiteSpace(responce.data.user.profile_image_url))
@@ -102,7 +107,19 @@ public class PassportHomePanel : MonoBehaviour
             {
                 _passportImageParent.gameObject.SetActive(false);
             }
+            for (int i = 0; i < _stampImage.Count; i++)
+            {
+                _stampImage[i].color = new Color(1f, 1f, 1f, 0.2f);
+            }
+            List<int> passportID = new List<int>();
+            passportID = UIManager.instance.ConvertStringListToIntList(responce.data.user.passport);
+            for (int i = 0; i < passportID.Count; i++)
+            {
+                int num = passportID[i] - 1;
+                _stampImage[num].color = Color.white;
+            }
 
+            _safariComplate.text = responce.data.user.passport.Count + " Safaris Completed";
             DataManager.Instance._profileData = responce;
         }
     }

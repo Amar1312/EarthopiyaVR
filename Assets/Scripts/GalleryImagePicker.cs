@@ -7,15 +7,17 @@ using System.Text;
 
 public class GalleryImagePicker : MonoBehaviour
 {
-    public Button _camaraBtn;
+    public Button _camaraBtn,_deleteProfileBtn;
     public Image profile_image;
     public GameObject _MaskingImage;
     public int maxSize = 1024;
     public float _profileWidth = 510f;
+    public Sprite _defaultSprite;
 
     private void Start()
     {
         _camaraBtn.onClick.AddListener(OnPickImageButtonClick);
+        _deleteProfileBtn.onClick.AddListener(DeleteProfileBtnClick);
     }
 
     public void OnPickImageButtonClick()
@@ -75,4 +77,12 @@ public class GalleryImagePicker : MonoBehaviour
         Sprite sprite = Sprite.Create(texture, rect, pivot);
         return sprite;
     }
+
+    public void DeleteProfileBtnClick()
+    {
+        UIManager.instance._profilePanel._saveBtn.gameObject.SetActive(true);
+        profile_image.sprite = _defaultSprite;
+        _MaskingImage.SetActive(false);
+    }
+
 }

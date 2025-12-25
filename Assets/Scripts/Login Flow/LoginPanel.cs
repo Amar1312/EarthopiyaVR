@@ -56,7 +56,7 @@ public class LoginPanel : MonoBehaviour
     {
         if (responces.status)
         {
-            _uiManager.SwitchScreen(2);
+            _uiManager.SwitchScreen(8);
             DataManager.Instance._userData = responces;
             _uiManager._splaceScreenVideo.SetDirectAudioMute(0, true);
         }

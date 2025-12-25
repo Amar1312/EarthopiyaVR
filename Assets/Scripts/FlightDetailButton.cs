@@ -9,12 +9,13 @@ public class FlightDetailButton : MonoBehaviour
     public TMP_InputField _desinationField;
     public GameObject _nextSafariScroll;
     public FlightData _flightData;
+    public bool _destinetionOn;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _meButton = GetComponent<Button>();
-        _meButton.onClick.AddListener(MeBtnClick);   
+        _meButton.onClick.AddListener(MeBtnClick);
     }
 
     void MeBtnClick()
@@ -22,5 +23,6 @@ public class FlightDetailButton : MonoBehaviour
         _desinationField.text = _destinationName;
         _nextSafariScroll.SetActive(false);
         UIManager.instance._bookFlightScript._flightData = _flightData;
+        UIManager.instance._bookFlightScript._destinetionOn = _destinetionOn;
     }
 }

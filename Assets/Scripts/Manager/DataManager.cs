@@ -1,6 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
+using System;
+using System.Text;
 
 public class DataManager : MonoBehaviour
 {
@@ -13,6 +16,7 @@ public class DataManager : MonoBehaviour
     public Transform _parentDialCode;
     public Image _testImage;
 
+    
     private void Awake()
     {
         if (Instance == null)
@@ -41,4 +45,6 @@ public class DataManager : MonoBehaviour
         }
     }
 
+
+    
 }

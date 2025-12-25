@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using ZXing;
 using Vuforia;
+using System.Collections.Generic;
 
 public class Vuforiya_QR_Read : MonoBehaviour
 {
@@ -24,22 +25,28 @@ public class Vuforiya_QR_Read : MonoBehaviour
     private Texture2D cameraTexture;
 
     private bool isFlashOn = false;
+    private APIQRRead _apiQRRead;
+
+    [Space]
+    [Header("Orignal QR Data")]
+    public List<string> _QRStringData;
 
     void Start()
     {
-        VuforiaApplication.Instance.OnVuforiaStarted += OnVuforiaStarted;
-        VuforiaApplication.Instance.OnVuforiaStopped += OnVuforiaStopped;
-
+        _apiQRRead = APIQRRead.Instance;
         if (qrCodeText != null)
         {
             qrCodeText.text = "Initializing Vuforia...";
         }
+        VuforiaApplication.Instance.OnVuforiaStarted += OnVuforiaStarted;
+        VuforiaApplication.Instance.OnVuforiaStopped += OnVuforiaStopped;
+
         if (VuforiaBehaviour.Instance != null)
         {
             VuforiaBehaviour.Instance.World.OnStateUpdated += OnVuforiaUpdated;
         }
 
-        _backBtn.onClick.AddListener(GoBack);
+        _backBtn.onClick.AddListener(GoBackScene);
         _lightBtn.onClick.AddListener(ToggleFlashlight);
     }
 
@@ -182,14 +189,34 @@ public class Vuforiya_QR_Read : MonoBehaviour
 
     void OnQRCodeDetected(string qrText)
     {
-        Debug.Log("=================================");
-        Debug.Log("QR CODE DETECTED!");
         Debug.Log("Text: " + qrText);
-        Debug.Log("=================================");
+
 
         if (qrCodeText != null)
         {
             qrCodeText.text = qrText;
+        }
+
+        StopScanning();
+        int Index = GetStringIndex(qrText); //ETPYA|v=1|eid=1|nonce=C7F73DE8|ts=0
+        if (Index >= 0)
+        {
+            int num = Index + 1;
+            List<string> PassportID = new List<string>();
+            PassportID.Add(num.ToString());
+            _apiQRRead.UpdatePassport(PassportID, PassportUpdate);
+        }
+        else
+        {
+            _apiQRRead._qRErrorScript.gameObject.SetActive(true);
+        }
+    }
+
+    void PassportUpdate(UpdatePassportResponce responce)
+    {
+        if (responce.status)
+        {
+            GoBackScene();
         }
     }
 
@@ -224,12 +251,9 @@ public class Vuforiya_QR_Read : MonoBehaviour
         Debug.Log("QR scanning stopped");
     }
 
-    public void GoBack()
+    public void GoBackScene()
     {
-        if (isFlashOn)
-        {
-            ToggleFlashlight();
-        }
+        CheckFlashOFF();
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 
@@ -239,4 +263,32 @@ public class Vuforiya_QR_Read : MonoBehaviour
 
         VuforiaBehaviour.Instance.CameraDevice.SetFlash(isFlashOn);
     }
+
+    public void CheckFlashOFF()
+    {
+        if (isFlashOn)
+        {
+            ToggleFlashlight();
+        }
+    }
+
+    public int GetStringIndex(string value)
+    {
+        if (string.IsNullOrEmpty(value))
+            return -1;
+
+        // Trim the search string
+        string trimmedSearch = value.Trim();
+
+        for (int i = 0; i < _QRStringData.Count; i++)
+        {
+            if (_QRStringData[i].Trim().Equals(trimmedSearch))
+            {
+                return i; // Found index
+            }
+        }
+
+        return -1; // Not found
+    }
+
 }

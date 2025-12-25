@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Vuforiya QR Read.unity
     guid: ec87908dd49b77b4eaa6e4ae34107725
+  - enabled: 0
+    path: Assets/Scenes/Video Test.unity
+    guid: 301208c159190b24e927c7ae375c7944
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: cb2e4556c19d9204692922e06ac26d88, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 9ae11fc2a157f574aaa7c4f7128cf62c, type: 2}

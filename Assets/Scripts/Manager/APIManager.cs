@@ -9,6 +9,7 @@ using SignInSample;
 
 public class APIManager : MonoBehaviour
 {
+    // Also APIQRRead script for API
     public static APIManager Instance;
     private const string APIBASEURL = "https://app.earthopya.com/api";
     private const string LOGIN = APIBASEURL + "/signin";
@@ -84,9 +85,7 @@ public class APIManager : MonoBehaviour
         byte[] bodyRaw = Encoding.UTF8.GetBytes(rawstring);
         request.uploadHandler = new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = new DownloadHandlerBuffer();
-        //request.SetRequestHeader("api-key", "MAGICPIX");
         request.SetRequestHeader("Content-Type", "application/json");
-        //request.SetRequestHeader("Accept", "application/json");
 
         var callback = new LoginResponce();
         request.downloadHandler = new DownloadHandlerBuffer();
@@ -151,10 +150,7 @@ public class APIManager : MonoBehaviour
         byte[] bodyRaw = Encoding.UTF8.GetBytes(rawstring);
         request.uploadHandler = new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = new DownloadHandlerBuffer();
-        //request.SetRequestHeader("api-key", "MAGICPIX");
         request.SetRequestHeader("Content-Type", "application/json");
-        //request.SetRequestHeader("Accept", "application/json");
-        //request.SetRequestHeader("platform", "WEB");
 
         var callback = new LoginResponce();
         request.downloadHandler = new DownloadHandlerBuffer();
@@ -221,11 +217,7 @@ public class APIManager : MonoBehaviour
         byte[] bodyRaw = Encoding.UTF8.GetBytes(rawstring);
         request.uploadHandler = new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = new DownloadHandlerBuffer();
-        //request.SetRequestHeader("api-key", "MAGICPIX");
         request.SetRequestHeader("Content-Type", "application/json");
-        //request.SetRequestHeader("Accept", "application/json");
-        //request.SetRequestHeader("platform", "WEB");
-        //request.SetRequestHeader("Authorization", "Bearer " + ApiToken);
 
         var callback = new LoginResponce();
         request.downloadHandler = new DownloadHandlerBuffer();
@@ -291,9 +283,7 @@ public class APIManager : MonoBehaviour
         byte[] bodyRaw = Encoding.UTF8.GetBytes(rawstring);
         request.uploadHandler = new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = new DownloadHandlerBuffer();
-        //request.SetRequestHeader("api-key", "MAGICPIX");
         request.SetRequestHeader("Authorization", "Bearer " + ApiToken);
-        //request.SetRequestHeader("Accept", "application/json");
 
         var callback = new ProfileResponce();
         request.downloadHandler = new DownloadHandlerBuffer();
@@ -418,11 +408,8 @@ public class APIManager : MonoBehaviour
         byte[] bodyRaw = Encoding.UTF8.GetBytes(rawstring);
         request.uploadHandler = new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = new DownloadHandlerBuffer();
-        //request.SetRequestHeader("api-key", "MAGICPIX");
         request.SetRequestHeader("Content-Type", "application/json");
         request.SetRequestHeader("Authorization", "Bearer " + ApiToken);
-        //request.SetRequestHeader("Accept", "application/json");
-        //request.SetRequestHeader("platform", "WEB");
 
         var callback = new UpdatePassportResponce();
         request.downloadHandler = new DownloadHandlerBuffer();
@@ -485,7 +472,6 @@ public class APIManager : MonoBehaviour
         request.uploadHandler = new UploadHandlerRaw(bodyRaw);
         request.downloadHandler = new DownloadHandlerBuffer();
 
-        //request.SetRequestHeader("Authorization", "Bearer " + ApiToken);
         request.SetRequestHeader("Content-Type", "application/json");
 
 
@@ -552,7 +538,6 @@ public class APIManager : MonoBehaviour
         request.downloadHandler = new DownloadHandlerBuffer();
 
         request.SetRequestHeader("Content-Type", "application/json");
-        //request.SetRequestHeader("Authorization", "Bearer " + ApiToken);
 
         var callback = new DeleteAccountResponce();
         request.downloadHandler = new DownloadHandlerBuffer();
@@ -697,6 +682,8 @@ public class APIManager : MonoBehaviour
         UIManager.instance.SwitchLoginScreen(0);
         UIManager.instance.SwitchScreen(1);
         UIManager.instance._splaceScreenVideo.SetDirectAudioMute(0, false);
+        DataManager.Instance._profileData = new ProfileResponce();
+        DataManager.Instance._userData = new LoginResponce();
         //if (_type == "google")
         //{
         //    _googleLoginIn.OnSignOut();

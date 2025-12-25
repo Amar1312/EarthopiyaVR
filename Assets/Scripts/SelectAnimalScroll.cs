@@ -13,7 +13,6 @@ public class SelectAnimalScroll : MonoBehaviour
     public SimpleScrollSnap _dummyScroll;
     public RectTransform _contant;
     public RectTransform _imageContant;
-    public Scrollbar _bar;
     public GameObject _bottomRightTree;
 
     public List<AnimalScrollBtn> _scrollBtn;
@@ -24,9 +23,70 @@ public class SelectAnimalScroll : MonoBehaviour
     public List<RectTransform> _mapDestinetionPoint;
     public List<GameObject> _titleName;
     public GameObject _selectTitle;
-    public Button _qrBtn;
+    public Button _qrBtn, _firstQrBtn;
 
     public int _pointIndex;
+
+    [Space]
+    [Header("First Show Panel")]
+    public List<GameObject> _goToSafariPanel;
+    public List<GameObject> _safariAllScroll;
+
+    [Space]
+    [Header("Scroll All Component")] // Index Must Same As QR Read Vuforiya_QR_Read Script _QRStringData List
+    public List<MainImageScroll> _dummyMainScrollComponent;
+    public List<MainImageScroll> _mainScrollComponent;
+
+    private void OnEnable()
+    {
+        if (SceneController.Instance._gameOn == 2)
+        {
+            SceneController.Instance._gameOn = 0;
+            Invoke(nameof(GetProfileAPiCall), 0.5f);
+        }
+        else
+        {
+            GetProfileAPiCall();
+        }
+    }
+    public void GetProfileAPiCall()
+    {
+        APIManager.Instance.GetProfile(GetProfileResponce);
+    }
+    void GetProfileResponce(ProfileResponce responce)
+    {
+        if (responce.status)
+        {
+            if (responce.data.user.passport.Count != 0)
+            {
+                SafariON(true);
+            }
+            else
+            {
+                SafariON(false);
+            }
+
+            for (int i = 0; i < _dummyMainScrollComponent.Count; i++)
+            {
+                _dummyMainScrollComponent[i].LockComponent(true);
+            }
+            for (int i = 0; i < _mainScrollComponent.Count; i++)
+            {
+                _mainScrollComponent[i].LockComponent(true);
+            }
+
+            List<int> passportID = new List<int>();
+            passportID = UIManager.instance.ConvertStringListToIntList(responce.data.user.passport);
+
+            for (int i = 0; i < passportID.Count; i++)
+            {
+                int num = passportID[i] - 1;
+                _mainScrollComponent[num].LockComponent(false);
+                _dummyMainScrollComponent[num].LockComponent(false);
+            }
+
+        }
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,6 +100,7 @@ public class SelectAnimalScroll : MonoBehaviour
             _scrollImage.Add(item.gameObject.GetComponent<MainImageScroll>());
         }
         _qrBtn.onClick.AddListener(QRBtnClick);
+        _firstQrBtn.onClick.AddListener(QRBtnClick);
     }
     public void SelectImageItem()
     {
@@ -139,15 +200,22 @@ public class SelectAnimalScroll : MonoBehaviour
         _mainScroll.gameObject.SetActive(true);
     }
 
-    public void ScrollValueUpdate()
-    {
-        Debug.Log("On scroll value update :" + _bar.value);
-    }
-
     public void QRBtnClick()
     {
         SceneController.Instance._gameOn = 2;
         SceneManager.LoadScene(2);
+    }
+
+    public void SafariON(bool on)
+    {
+        for (int i = 0; i < _goToSafariPanel.Count; i++)
+        {
+            _goToSafariPanel[i].SetActive(!on);
+        }
+        for (int i = 0; i < _safariAllScroll.Count; i++)
+        {
+            _safariAllScroll[i].SetActive(on);
+        }
     }
 
 }

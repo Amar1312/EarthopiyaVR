@@ -83,8 +83,25 @@ public class Profile
     public List<string> passport;
     public string google_id;
     public string apple_id;
+    public string created_at;
 }
 
+#endregion
+
+#region AnimalData
+
+[Serializable]
+public class AnimalData
+{
+    public int animalNumber;
+    public string userAnimalName;
+    public bool notificationPanel;
+    public string firstText;
+
+    public string secondText;
+    public int biggestImageIndex;
+    public string biggestAcitityText;
+}
 #endregion
 
 //#region Update Profile
@@ -148,6 +165,16 @@ public class CountryData
     public string unicode;
     public string image;
     public string dial_code;
+}
+#endregion
+
+#region
+[Serializable]
+public class LocationData
+{
+    public string date;
+    public float latitude;
+    public float longitude;
 }
 #endregion
 

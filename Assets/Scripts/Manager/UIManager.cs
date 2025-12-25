@@ -21,12 +21,18 @@ public class UIManager : MonoBehaviour
     public GameObject _loadingPnel;
     public VideoPlayer _splaceScreenVideo;
     [Space]
-    [Header("Ticket Booking Script;")]
+    [Header("Ticket Booking Script")]
     public BookFlightScreen _bookFlightScript;
     public SearchDetailPanel _searchDetailScript;
     public FlightDetailPanel _flightDetailScript;
     public ChooseSeatPanel _chooseSeatScript;
     public BoardingPassPanel _boardingPassScript;
+    public NoFlightDetailPanel _noFlightDetailScript;
+    [Space]
+    [Header("Safari Selecter Script")]
+    public SelectAnimalScroll _safariSelectScript;
+    public NotificationNamePanel _notificationNameScript;
+    public AnimalSafariInfoController _allAnimalSafariScript;
 
     [Space]
     [Header("Bottom Bar Button")]
@@ -75,6 +81,11 @@ public class UIManager : MonoBehaviour
         else if (startPanel == 3)
         {
             SwitchScreen(11);
+            _splaceScreenVideo.SetDirectAudioMute(0, true);
+        }
+        else if (startPanel == 4)
+        {
+            SwitchScreen(2);
             _splaceScreenVideo.SetDirectAudioMute(0, true);
         }
         else
@@ -280,5 +291,32 @@ public class UIManager : MonoBehaviour
         return null;
     }
 
+    public List<int> ConvertStringListToIntList(List<string> stringList)
+    {
+        List<int> intList = new List<int>();
 
+        if (stringList == null)
+            return intList;
+
+        foreach (string s in stringList)
+        {
+            if (int.TryParse(s, out int value))
+            {
+                intList.Add(value);
+            }
+        }
+
+        return intList;
+    }
+
+    public string ConvertToReadableDateForCreateDate(string isoDate)
+    {
+        DateTime dateTime = DateTime.Parse(
+            isoDate,
+            CultureInfo.InvariantCulture,
+            DateTimeStyles.AdjustToUniversal
+        );
+
+        return dateTime.ToString("dd MMMM yyyy", CultureInfo.InvariantCulture);
+    }
 }
