@@ -27,6 +27,7 @@ namespace WPM
         public Text informationText;
         public float langLongUpdateRate = 0.1f;
         float nextLangLongUpdate = 0;
+        public float _distance;
 
         // Cached for our use
         WorldMapGlobe map; // the globe
@@ -36,9 +37,12 @@ namespace WPM
         bool changingFrontiersColor = false;
         bool minimizeState = false;
         bool animatingField;
+        bool _oneanimal = false;
+        Vector3 _gloabPosition = Vector3.zero;
 
         private void OnEnable()
         {
+            //WorldMapGlobe.instance.SetZoomLevel(2f);
 #if LIGHTSPEED
             if (_camera != null)
                 _camera.fieldOfView = 180;
@@ -52,6 +56,7 @@ namespace WPM
         private void OnDisable()
         {
             map.ResetCamera(2f);
+            Debug.Log("Reset Data Call;");
         }
 
 
@@ -63,6 +68,7 @@ namespace WPM
 
             // Get a reference to the World Map API:
             map = WorldMapGlobe.instance;
+
             //#if LIGHTSPEED
             //            if (_camera != null)
             //                _camera.fieldOfView = 180;
@@ -189,15 +195,17 @@ namespace WPM
 
                 if (animatingField)
                 {
-                    if (_camera.fieldOfView > 60)
+                    if (_camera.fieldOfView > 80)
                     {
                         _camera.fieldOfView -= (181.0f - _camera.fieldOfView) / (220.0f - _camera.fieldOfView);
+
                     }
                     else
                     {
-                        _camera.fieldOfView = 60;
+                        _camera.fieldOfView = 80;
                         animatingField = false;
                         map.zoomMaxDistance = map.GetZoomLevelDistance(1);
+                        map.SetZoomLevel(2f);
                     }
                 }
             }
@@ -206,13 +214,13 @@ namespace WPM
                 // Animates the camera field of view (just a cool effect at the begining)
                 if (animatingField)
                 {
-                    if (Camera.main.fieldOfView > 60)
+                    if (Camera.main.fieldOfView > 80)
                     {
                         Camera.main.fieldOfView -= (181.0f - Camera.main.fieldOfView) / (220.0f - Camera.main.fieldOfView);
                     }
                     else
                     {
-                        Camera.main.fieldOfView = 60;
+                        Camera.main.fieldOfView = 80;
                         animatingField = false;
                         map.zoomMaxDistance = map.GetZoomLevelDistance(1);
                         map.SetZoomLevel(2f);
@@ -270,8 +278,9 @@ namespace WPM
 
         public void ChangeZoomLevel(float zoomLevel)
         {
+            //map.GetZoomLevel() * 100f;
             map.SetZoomLevel(zoomLevel / 100);
-            if(zoomLevel != 200)
+            if (zoomLevel != 200)
             {
                 if (map.autoRotationSpeed != 0f)
                 {

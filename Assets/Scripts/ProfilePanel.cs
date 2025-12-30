@@ -11,6 +11,7 @@ public class ProfilePanel : MonoBehaviour
 {
     public TMP_InputField _firstName, _lastName, _dateofBirth, _number, _email;
     public Button _saveBtn, _backBtn, _delateBtn, _dialCodeBtn;
+    public GameObject _editPassportText;
     public Image _profileImage;
     public GameObject _maskingImage;
     public GameObject _updateSuccess;
@@ -177,12 +178,17 @@ public class ProfilePanel : MonoBehaviour
     public void UpdateSuccess()
     {
         _updateSuccess.SetActive(true);
+        _backBtn.gameObject.SetActive(false);
+        _editPassportText.SetActive(false);
+
         _saveBtn.gameObject.SetActive(false);
         Invoke(nameof(OffSuccess), 2f);
     }
     public void OffSuccess()
     {
         _updateSuccess.SetActive(false);
+        _backBtn.gameObject.SetActive(true);
+        _editPassportText.SetActive(true);
     }
 
     public bool ValidateFinalDate()

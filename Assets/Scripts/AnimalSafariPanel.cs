@@ -42,6 +42,27 @@ public class AnimalSafariPanel : MonoBehaviour
     [Space]
     public int _locationIndex;
 
+
+    //[Header("Run Once")]
+    //public bool reverseLatLongOnce;
+
+    //[ContextMenu("Revers Data")]
+    //private void OnValidate()
+    //{
+    //    if (!reverseLatLongOnce || locations == null) return;
+
+    //    foreach (var loc in locations)
+    //    {
+    //        float temp = loc.latitude;
+    //        loc.latitude = loc.longitude;
+    //        loc.longitude = temp;
+    //    }
+
+    //    // Disable after fixing
+    //    reverseLatLongOnce = false;
+    //}
+
+
     private void OnEnable()
     {
         _sceneData = SceneController.Instance;
@@ -115,6 +136,7 @@ public class AnimalSafariPanel : MonoBehaviour
         _mapObj.SetActive(true);
         // Get a reference to the World Map API:
         map = WorldMapGlobe.instance;
+
         map.autoRotationSpeed = 0.03f;
         //SetMarker();
         Invoke(nameof(SetMarker), 1f);
@@ -198,6 +220,8 @@ public class AnimalSafariPanel : MonoBehaviour
 
         if (_locationIndex != -1)
         {
+            Debug.Log("lat:" + locations[_locationIndex].latitude + "long:" + locations[_locationIndex].longitude);
+
             float MainLati = locations[_locationIndex].latitude;
             float MainLon = locations[_locationIndex].longitude;
             SetLatitudeData(MainLati, MainLon, _marker[0]);

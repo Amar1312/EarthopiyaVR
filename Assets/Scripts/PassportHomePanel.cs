@@ -24,7 +24,7 @@ public class PassportHomePanel : MonoBehaviour
 
 
     private UIManager _uiManager;
-    private bool oneTime = false;
+   // private bool oneTime = false;
 
 
     private void OnEnable()
@@ -40,10 +40,7 @@ public class PassportHomePanel : MonoBehaviour
             GetProfileAPiCall();
         }
 
-        if (oneTime)
-        {
-            _startSafari.SetActive(false);
-        }
+
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -119,6 +116,12 @@ public class PassportHomePanel : MonoBehaviour
                 _stampImage[num].color = Color.white;
             }
 
+            if (passportID.Count <= 0)
+                _startSafari.SetActive(true);
+            else
+                _startSafari.SetActive(false);
+
+
             _safariComplate.text = responce.data.user.passport.Count + " Safaris Completed";
             DataManager.Instance._profileData = responce;
         }
@@ -126,11 +129,11 @@ public class PassportHomePanel : MonoBehaviour
 
     private void OnDisable()
     {
-        if (!oneTime)
-        {
-            _startSafari.SetActive(false);
-            oneTime = true;
-        }
+        //if (!oneTime)
+        //{
+        //    _startSafari.SetActive(false);
+        //    oneTime = true;
+        //}
     }
 
     public string FormatDate(string input)

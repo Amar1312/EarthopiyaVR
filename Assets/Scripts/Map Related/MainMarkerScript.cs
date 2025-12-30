@@ -14,8 +14,8 @@ public class MainMarkerScript : MonoBehaviour
     public void SetSprite(float num)
     {
         //0.0003 => Small Size, 0.03 => Max Size
-
-        float scaleValue = Mathf.Lerp(0.0004f, 0.025f, num);
+        //0.00005
+        float scaleValue = Mathf.Lerp(0.00002f, 0.025f, num);
 
         _spriteObject.transform.localScale = new Vector3(scaleValue, scaleValue, scaleValue);
     }
